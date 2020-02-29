@@ -1,9 +1,14 @@
 # CodeTogether
-A fresh take on collaborative coding
-https://codetogether.com
+A fresh take on collaborative coding.
+See more on [codetogether.com](https://codetogether.com).
 
 ## About CodeTogether
 CodeTogether is a pair programming tool specifically designed around quick organic sessions, like a quick Slack or Hangout call. It is highly optimized for coding with participants connecting in from any modern browser and able to have a realtime coding experience even if connecting from the other side of the world. Anyone developing in VS Code or Eclipse can start using CodeTogether simply by installing an extension or plugin.
+
+## CodeTogether in Action
+![CodeTogether Gif](docs/images/codetogether.gif)
+
+## More about CodeTogether
 
 ### Stay in Your IDE
 Make real time edits to code shared by the host’s IDE using a browser-based editor. Eclipse and VS Code support now available, other IDEs coming soon.
