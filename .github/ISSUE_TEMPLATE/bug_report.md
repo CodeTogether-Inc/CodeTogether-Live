@@ -23,13 +23,13 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**CodeTogether Host (please complete the following information):**
+**CodeTogether Host**
  - IDE: [e.g. Eclipse, VSCode, IntelliJ]
  - IDE Version [e.g. 2020.1, 1.44]
  - OS: [e.g. Windows]
  - OS Version: [e.g. 10]
 
-**Browser Participant (please complete the following information):**
+**Browser Participant**
  - Browser: [e.g. Chrome, Safari]
  - Browser Version: [e.g. 22]
  - OS: [e.g. Windows]
