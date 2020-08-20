@@ -27,4 +27,3 @@ Everyone in the session gets to control who they choose to follow, whether the h
 
 ### Integrates Well
 Our goal is to improve your development process, not upset it. CodeTogether is a nice complement to popular tools you might use already, like Slack or MS Teams.
-
