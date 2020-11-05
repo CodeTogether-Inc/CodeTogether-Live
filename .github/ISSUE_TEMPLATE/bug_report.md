@@ -30,7 +30,7 @@ If applicable, add screenshots to help explain your problem.
  - OS Version: [e.g. 10]
 
 **IDE Participant**
-IDE: [e.g. Eclipse, VSCode, IntelliJ]
+ - IDE: [e.g. Eclipse, VSCode, IntelliJ]
  - IDE Version [e.g. 2020.1, 1.44]
  - OS: [e.g. Windows]
  - OS Version: [e.g. 10]
