@@ -26,4 +26,4 @@ Participants can take control and code right from the browser with content assis
 Everyone in the session gets to control who they choose to follow, whether the host or other participants, to see exactly what teammates are discussing.
 
 ### Integrates Well
-Our goal is to improve your development process, not upset it. CodeTogether is a nice complement to popular tools you might use already, like Slack or MS Teams
+Our goal is to improve your development process, not upset it. CodeTogether is a nice complement to popular tools you might use already, like Slack or MS Teams.
