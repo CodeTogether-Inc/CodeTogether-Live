@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "codetogether.fullname" . }}
+  labels:
+    {{- include "codetogether.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "codetogether.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "codetogether.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "codetogether.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: CT_LOCATOR
+            value: "none"
+          - name: CT_SERVER_URL
+            value: {{ .Values.serverURL | quote }}
+          - name: CT_TRUST_ALL_CERTS
+            value: {{ .Values.trustAllCerts | quote }}
+          - name: CT_LICENSEE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: licensee
+          - name: CT_MAXCONNECTIONS
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: max_connections
+          - name: CT_EXPIRATION
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: expiration
+          - name: CT_SIGNATURE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: signature
+          ports:
+            - name: http
+              containerPort: 1080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
