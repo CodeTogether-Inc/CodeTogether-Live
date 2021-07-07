@@ -16,47 +16,41 @@
 <a href="https://marketplace.visualstudio.com/items?itemName=genuitecllc.codetogether"><img src="https://img.shields.io/badge/Download-VS%20Code-3c99d4"></a>
 </p>
 
-Great for remote teams that need to collaborate, even when using different IDEs. [CodeTogether](https://www.codetogether.com) is available for IntelliJ, Eclipse and VS Code. Host a collaborative session from any supported IDE, and participants can join from their preferred IDE or a browser. Source is always [End-to-End Encrypted](https://www.codetogether.com/download/security/) and [on-premises](https://www.codetogether.com/docs/on-premises-faq) hosting is optionally available. Host-based intelligence ensures everyone gets the language smarts needed for capabilities such as content assist and validation, regardless of how they join the session.
-![CodeTogether Gif](docs/images/codetogether.gif)
+Live share IDEs and coding sessions with [CodeTogether](https://www.codetogether.com/eHts/). See changes in real time, even when coding in the same file, like Google Docs for your code. Cross-IDE support for Eclipse, IntelliJ, and VS Code. So many uses: pair programming, mob programming, code review, project design, unit testing, education, interviews, remote development and more.
 
+Free plan with anonymous usage is always available.
+
+![CodeTogether Gif](https://www.codetogether.com/wp-content/uploads/2021/07/github.gif)
 ## Key Features
-<div class="tg-wrap"><table>
-<tbody>
-  <tr>
-    <td>No vendor lock-in</td>
-    <td>Host or join a pair programming session from Eclipse, IntelliJ or VS Code. Simply share the session’s link with anyone you like. They join the session from either their local IDE (even if it’s different from yours) or a web browser (with the theme and key bindings of their preferred IDE).</td>
-  </tr>
-  <tr>
-    <td>Host-provided language smarts</td>
-    <td>CodeTogether participants benefit from the host IDE’s language smarts. Even if you join from a browser or an IDE with a different configuration, you still get key features like content assist and as-you-type validation across the workspace.</td>
-  </tr>
-  <tr>
-    <td>Code together or alone</td>
-    <td>CodeTogether makes it easy to switch between groups of developers coding together, or code on your own during a session. Developers can even edit the same file at the same time, just like in Google Docs. The CodeTogether view gives a nice overview of the session so you can quickly see who’s doing what, and jump into a new group or branch out on your own.</td>
-  </tr>
-  <tr>
-    <td>Always secure</td>
-    <td>The project remains on the host computer and only required data is relayed to participants and the CodeTogether backend using full end-to-end encryption. An on-premises version that keeps all source behind your firewall is also available.</td>
-  </tr>
-</tbody>
-</table>
-</div>
+- **Multi-IDE support.** Host and join from IntelliJ, VS Code or Eclipse.
+- **Browser too.** IDE functionality with just a URL, even join from a phone or tablet.
+- **Secure.** End-to-end encryption & On-Premises option with SSO integration.
+- **Real-time editing.** See changes immediately, even when editing the same file.
+- **Host-based intelligence.** Exceptional content assist, validation & navigation for all.
+- **Shared consoles & terminals.** Host-controlled with optional write access.
+- **Share local servers.** Expose to your guests web apps running locally.
+- **Flexible.** Supports multiple groups, easily move between groups or code alone. 
+- **CodeTogether Teams.** Simplifies collaboration with team-centric flows.
+- **Efficient.** No resource drain, lag time or artifacting like with screen sharing.
+- **Intuitive design.** Easy to host, easy to join, with no learning curve.
 
 ## Documentation
 #### Quickstart
-[Eclipse](https://www.codetogether.com/docs/codetogether-for-eclipse-installation/)  / [IntelliJ](https://www.codetogether.com/docs/codetogether-for-jetbrains-ides-installation/)  / [VS Code](https://www.codetogether.com/docs/codetogether-for-vs-code-installation/) Installation Guide  
-[Getting Started with CodeTogether](https://www.codetogether.com/docs/getting-started-with-codetogether/)  
-[CodeTogether 3.0 Video Tutorial](https://youtu.be/Cb6A49ylPnc)
+- Installation Guide: [Eclipse](https://www.codetogether.com/eHts/docs/codetogether-for-eclipse-installation/)  / [IntelliJ](https://www.codetogether.com/eHts/docs/codetogether-for-jetbrains-ides-installation/)  / [VS Code](https://www.codetogether.com/eHts/docs/codetogether-for-vs-code-installation/)
+- [Getting Started with CodeTogether](https://www.codetogether.com/eHts/docs/getting-started-with-codetogether/)  
+- [CodeTogether FAQ](https://www.codetogether.com/eHts/docs/faq/)
+- [CodeTogether Video Tutorial](https://youtu.be/OgCWc3hTBc0)
 
 #### On-Premises
-[Installation Guide](https://www.codetogether.com/docs/on-premises-installation-guide/)  
-[FAQ](https://www.codetogether.com/docs/on-premises-faq/)
+- [Features](https://www.codetogether.com/eHts/on-premises/)
+- [Installation Guide](https://www.codetogether.com/eHts/docs/on-premises-installation-guide/)  
+- [FAQ](https://www.codetogether.com/eHts/docs/on-premises-faq/)
 
 #### Reference
-[Blog](https://www.codetogether.com/blog/)  
-[Delivery log](https://www.codetogether.com/deliverylog/)  
-[Security overview](https://www.codetogether.com/download/security/)  
-[Plans & pricing](https://www.codetogether.com/pricing)  
+- [Blog](https://www.codetogether.com/eHts/blog/)  
+- [Delivery log](https://www.codetogether.com/eHts/deliverylog/)  
+- [Security overview](https://www.codetogether.com/eHts/download/security/)  
+- [Plans & pricing](https://www.codetogether.com/eHts/pricing)  
 
 ## Contact Us
 <a href="https://twitter.com/genuitec"><img src="https://img.shields.io/twitter/follow/Genuitec?style=social"></a>
