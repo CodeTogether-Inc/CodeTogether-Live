@@ -13,3 +13,7 @@ repositoryID: da539437-8160-4cd8-846b-a5694d5ce326
 owners: # (optional, used to claim repository ownership)
   - name: codetogether
     email: info@codetogether.com
+  - name: genuitec
+    email: info@genuitec.com.com
+  - name: reports
+    email: reports@genuitec.com
