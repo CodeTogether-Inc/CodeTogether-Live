@@ -14,6 +14,6 @@ owners: # (optional, used to claim repository ownership)
   - name: codetogether
     email: info@codetogether.com
   - name: genuitec
-    email: info@genuitec.com.com
+    email: info@genuitec.com
   - name: reports
     email: reports@genuitec.com
