@@ -3,9 +3,9 @@ entries:
   codetogether:
   - apiVersion: v2
     appVersion: 4.1.0
-    created: "2021-07-19T12:53:17.626679015-05:00"
+    created: "2021-07-21T13:51:05.735899381-05:00"
     description: Helm chart to deploy CodeTogether On-Premises in a Kubernetes cluster.
-    digest: 3ebc313fd83fd4a6fe7b7e1d62b0721edb9c41571da2e406c65ea5851b9a4efa
+    digest: 99d006219123e45a5246003ecc32d30fef547ab496985191a94b266380f72824
     home: https://www.codetogether.com
     keywords:
     - codetogether
@@ -20,4 +20,4 @@ entries:
     urls:
     - codetogether-1.0.1.tgz
     version: 1.0.1
-generated: "2021-07-19T12:53:17.625607983-05:00"
+generated: "2021-07-21T13:51:05.732996109-05:00"
