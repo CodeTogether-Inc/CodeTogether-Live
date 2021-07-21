@@ -3,9 +3,9 @@ entries:
   codetogether:
   - apiVersion: v2
     appVersion: 4.1.0
-    created: "2021-07-21T17:39:23.867274375-05:00"
-    description: Helm chart to deploy CodeTogether On-Premises in a Kubernetes cluster
-    digest: 90ff0d0265b03682d18657167eaa405526495f283821df25f0da8492302fb0bd
+    created: "2021-07-21T17:51:46.704998336-05:00"
+    description: CodeTogether is used to live share IDEs and coding sessions.
+    digest: 482b4eed6cd395d62295ff32bc89cf5cf3806f19dcc5a60005024115304d2584
     home: https://www.codetogether.com
     icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
     keywords:
@@ -21,4 +21,4 @@ entries:
     urls:
     - codetogether-1.0.1.tgz
     version: 1.0.1
-generated: "2021-07-21T17:39:23.866280651-05:00"
+generated: "2021-07-21T17:51:46.701211798-05:00"
