@@ -3,21 +3,22 @@ entries:
   codetogether:
   - apiVersion: v2
     appVersion: 4.1.0
-    created: "2021-07-21T13:51:05.735899381-05:00"
-    description: Helm chart to deploy CodeTogether On-Premises in a Kubernetes cluster.
-    digest: 99d006219123e45a5246003ecc32d30fef547ab496985191a94b266380f72824
+    created: "2021-07-21T17:39:23.867274375-05:00"
+    description: Helm chart to deploy CodeTogether On-Premises in a Kubernetes cluster
+    digest: 90ff0d0265b03682d18657167eaa405526495f283821df25f0da8492302fb0bd
     home: https://www.codetogether.com
+    icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
     keywords:
     - codetogether
     - collaborative
     - pair
     - programming
     maintainers:
-    - email: support@codetogether.com
+    - email: info@codetogether.com
       name: Genuitec, LLC
     name: codetogether
     type: application
     urls:
     - codetogether-1.0.1.tgz
     version: 1.0.1
-generated: "2021-07-21T13:51:05.732996109-05:00"
+generated: "2021-07-21T17:39:23.866280651-05:00"
