@@ -3,9 +3,9 @@ entries:
   CodeTogether:
   - apiVersion: v2
     appVersion: 4.1.0
-    created: "2021-07-21T18:05:32.209623654-05:00"
+    created: "2021-07-21T19:16:38.872099773-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
-    digest: 056029d7c70f4a6780f9f91b653ec66e83667b070de54669f5eded3e4ec940be
+    digest: 1d32a2b8ff9b880e6fc7b833a26318e8ed586c3cb63152d6b806b81541ae3455
     home: https://www.codetogether.com
     icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
     keywords:
@@ -21,4 +21,4 @@ entries:
     urls:
     - CodeTogether-1.0.1.tgz
     version: 1.0.1
-generated: "2021-07-21T18:05:32.207224315-05:00"
+generated: "2021-07-21T19:16:38.871086139-05:00"
