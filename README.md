@@ -2,7 +2,7 @@
   <br>
     <img src="https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-full-logo.png" alt="logo">
   <br>
-  A fresh take on collaborative coding
+  A fresh take on collaborative coding and IDE live sharing
   <br>
   <br>
 </h1>
@@ -16,9 +16,9 @@
 <a href="https://marketplace.visualstudio.com/items?itemName=genuitecllc.codetogether"><img src="https://img.shields.io/badge/Download-VS%20Code-3c99d4"></a>
 </p>
 
-Live share IDEs and coding sessions with [CodeTogether](https://www.codetogether.com/eHts/). See changes in real time, even when coding in the same file, like Google Docs for your code. Cross-IDE support for Eclipse, IntelliJ, and VS Code. So many uses: pair programming, mob programming, code review, project design, unit testing, education, interviews, remote development and more.
+Live share IDEs and coding sessions with [CodeTogether](https://www.codetogether.com/eHts/). See changes in real time, even when coding in the same file, like Google Docs for your code. Cross-IDE support for Eclipse, IntelliJ, and VS Code and IDEs based on them. So many uses: pair programming, mob programming, code review, project design, unit testing, education, interviews, remote development, code collaboration and more.
 
-Free plan with anonymous usage is always available.
+Free plans, including  anonymous usage, are always available.
 
 ![CodeTogether Gif](https://www.codetogether.com/wp-content/uploads/2021/07/github.gif)
 ## Key Features
