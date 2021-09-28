@@ -29,6 +29,7 @@ Free plan with anonymous usage is always available.
 - **Host-based intelligence.** Exceptional content assist, validation & navigation for all.
 - **Shared consoles & terminals.** Host-controlled with optional write access.
 - **Share local servers.** Expose to your guests web apps running locally.
+- **Run Tests and Launches.** Easily write, run, re-run tests for red/green refactor TDD.
 - **Flexible.** Supports multiple groups, easily move between groups or code alone. 
 - **CodeTogether Teams.** Simplifies collaboration with team-centric flows.
 - **Efficient.** No resource drain, lag time or artifacting like with screen sharing.
