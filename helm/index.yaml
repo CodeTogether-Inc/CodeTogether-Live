@@ -3,7 +3,7 @@ entries:
   CodeTogether:
   - apiVersion: v2
     appVersion: 5.0.1a-01149
-    created: "2021-11-18T13:42:25.756264877-06:00"
+    created: "2022-01-25T10:49:30.586169405-06:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 4cd92fb0a3fd4604f48a5c048d96e83a2c96ed03c5e51af55602917a0b267726
     home: https://www.codetogether.com
@@ -24,7 +24,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 5.0.0
-    created: "2021-11-18T13:42:25.755129422-06:00"
+    created: "2022-01-25T10:49:30.584266249-06:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: a2d2c5476500bfd291482581f2810c17b62998984ddf3edfa889b61e18083ddf
     home: https://www.codetogether.com
@@ -45,7 +45,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 4.1.2
-    created: "2021-11-18T13:42:25.75283446-06:00"
+    created: "2022-01-25T10:49:30.582171226-06:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: d1d3b503c89e2cbf5929c078fc96b27a386b664a2535c060f392ce288993e0ca
     home: https://www.codetogether.com
@@ -63,4 +63,26 @@ entries:
     urls:
     - CodeTogether-1.0.1.tgz
     version: 1.0.1
-generated: "2021-11-18T13:42:25.751189548-06:00"
+  codetogether:
+  - apiVersion: v2
+    appVersion: 2022.1.0
+    created: "2022-01-25T10:49:30.587407371-06:00"
+    description: CodeTogether is used to live share IDEs and coding sessions.
+    digest: e858a69f798f1a9d57084e9359fe346be62f724c304ec8f7d359196fa78ebb2a
+    home: https://www.codetogether.com
+    icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
+    keywords:
+    - codetogether
+    - collaborative
+    - pair
+    - programming
+    kubeVersion: '>= 1.18.0'
+    maintainers:
+    - email: info@codetogether.com
+      name: Genuitec, LLC
+    name: codetogether
+    type: application
+    urls:
+    - codetogether-1.3.0.tgz
+    version: 1.3.0
+generated: "2022-01-25T10:49:30.580658231-06:00"
