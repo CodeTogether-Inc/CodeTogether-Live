@@ -1,6 +1,6 @@
 apiVersion: v1
 entries:
-  CodeTogether:
+  codetogether:
   - apiVersion: v2
     appVersion: 5.0.1a-01149
     created: "2022-01-31T13:17:40.5323874-06:00"
@@ -17,10 +17,10 @@ entries:
     maintainers:
     - email: info@codetogether.com
       name: Genuitec, LLC
-    name: CodeTogether
+    name: codetogether
     type: application
     urls:
-    - CodeTogether-1.2.0.tgz
+    - codetogether-1.2.0.tgz
     version: 1.2.0
   - apiVersion: v2
     appVersion: 5.0.0
@@ -38,10 +38,10 @@ entries:
     maintainers:
     - email: info@codetogether.com
       name: Genuitec, LLC
-    name: CodeTogether
+    name: codetogether
     type: application
     urls:
-    - CodeTogether-1.1.0.tgz
+    - codetogether-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v2
     appVersion: 4.1.2
@@ -58,10 +58,10 @@ entries:
     maintainers:
     - email: info@codetogether.com
       name: Genuitec, LLC
-    name: CodeTogether
+    name: codetogether
     type: application
     urls:
-    - CodeTogether-1.0.1.tgz
+    - codetogether-1.0.1.tgz
     version: 1.0.1
   codetogether:
   - apiVersion: v2
