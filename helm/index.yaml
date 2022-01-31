@@ -63,7 +63,6 @@ entries:
     urls:
     - codetogether-1.0.1.tgz
     version: 1.0.1
-  codetogether:
   - apiVersion: v2
     appVersion: 2022.1.0
     created: "2022-01-31T13:17:40.537179542-06:00"
