@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "codetogether.fullname" . }}
+  labels:
+    {{- include "codetogether.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http  
+    {{- if .Values.av.enabled }}
+    - port: 4443
+      targetPort: av-tcp
+      protocol: TCP
+      name: av-tcp
+    - port: 10000
+      targetPort: av-udp
+      protocol: UDP
+      name: av-udp
+    {{- end }}
+  selector:
+    {{- include "codetogether.selectorLabels" . | nindent 4 }}

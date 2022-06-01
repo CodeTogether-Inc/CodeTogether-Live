@@ -1,0 +1,227 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "codetogether.fullname" . }}
+  labels:
+    {{- include "codetogether.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "codetogether.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "codetogether.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- if eq .Values.imageCredentials.enabled true }}
+      imagePullSecrets:
+        - name: {{ include "codetogether.fullname" . }}-pull-secret
+      {{- end }}
+      serviceAccountName: {{ include "codetogether.serviceAccountName" . }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+
+          env:
+          #
+          # Set CodeTogether runtime configuration
+          #         
+          - name: CT_SERVER_URL
+            value: {{ .Values.codetogether.url | quote }}
+          - name: CT_TRUST_ALL_CERTS
+            value: {{ .Values.codetogether.trustAllCerts | quote }}
+
+          {{- if eq .Values.codetogether.mode "direct" }}
+          - name: CT_LOCATOR
+            value: "none"
+          - name: CT_PROMETHEUS_ENABLED
+            value: {{ .Values.direct.metrics.prometheusEnabled | quote }}         
+          {{- if .Values.direct.metrics.statsdEnabled }}
+          - name: CT_METRICS_STATSD_HOST
+            value: {{ .Values.direct.metrics.statsdHost | quote }}
+          - name: CT_METRICS_STATSD_PORT
+            value: {{ .Values.direct.metrics.statsdPort | quote }}
+          - name: CT_METRICS_STATSD_PROTOCOL
+            value: {{ .Values.direct.metrics.statsdProtocol | quote }}
+          {{- end }}
+          {{- end }}
+
+          {{- if eq .Values.codetogether.mode "locator-central" }}
+          - name: CT_LOCATOR
+            value: {{ .Values.codetogether.url | quote }}
+          - name: CT_LOCATOR_CONFIG
+            value: {{ .Values.locatorCentral | toJson | quote }}
+          {{- end }}
+          {{- if .Values.locatorCentral.database.sslEnabled }}
+          - name: CT_DB_SSL_KEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-ssl
+                key: key
+          - name: CT_DB_SSL_CERT
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-ssl
+                key: cert
+          - name: CT_DB_SSL_CA
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-ssl
+                key: ca
+          {{- end }}
+
+          {{- if eq .Values.codetogether.mode "locator-edge" }}
+          - name: CT_LOCATOR
+            value: {{ .Values.locatorEdge.locator | quote }}
+          - name: CT_REGION
+            value: {{ .Values.locatorEdge.region | quote }}
+          {{- end }}  
+
+          {{- if or (eq .Values.codetogether.mode "direct") (eq .Values.codetogether.mode "locator-edge") }}
+          - name: CT_AV_ENABLED
+            value: {{ .Values.av.enabled | quote }}
+          {{- if .Values.av.enabled }} 
+          - name: CT_AV_LAN_IP
+            value: {{ .Values.av.serverIP | quote }}
+          {{- end }}
+          {{- else }}
+          - name: CT_AV_ENABLED
+            value: "false"
+          {{- end }}
+
+          {{- if .Values.av.stunServers.enabled }}
+          - name: CT_AV_COTURN_SERVER
+            value: {{ .Values.av.stunServers.server | quote }}
+          - name: CT_AV_COTURN_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-coturn
+                key: secret
+          {{- end }}
+
+          {{- if .Values.codetogether.timeZone.enabled }}
+          - name: CT_TIME_ZONE
+            value: {{ .Values.codetogether.timeZone.region | quote }}
+          {{- end }}
+
+          - name: CT_LICENSEE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: licensee
+          - name: CT_MAXCONNECTIONS
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: max_connections
+          - name: CT_EXPIRATION
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: expiration
+          - name: CT_SIGNATURE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-license
+                key: signature
+          {{- if .Values.dashboard.enabled }}
+          - name: CT_DASHBOARD_USER
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-dashboard
+                key: username
+          - name: CT_DASHBOARD_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-dashboard
+                key: password
+          {{- end }}
+
+          #
+          # Set SSO configuration
+          #
+          {{- if .Values.sso.enabled }}
+          - name: CT_SSO_PROVIDER
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-sso
+                key: provider
+          - name: CT_SSO_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-sso
+                key: clientID
+          - name: CT_SSO_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-sso
+                key: clientSecret
+          - name: CT_SSO_SYSTEM_BASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.fullname" . }}-sso
+                key: systemBaseUrl
+          - name: CT_SSO_SECURE_JWKS_ENDPT_ENABLE
+            value: {{ .Values.sso.jwksEndPointEnabled | quote }}
+          {{- end }}
+
+          # 
+          # Set container configuration
+          #
+          ports:
+            - name: http
+              containerPort: 1080
+              protocol: TCP
+            {{- if .Values.av.enabled }}
+            - name: av-tcp
+              containerPort: 4443
+              protocol: TCP
+            - name: av-udp
+              containerPort: 10000
+              protocol: UDP
+            {{- end }}
+          
+          livenessProbe:
+            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
+            successThreshold: {{ .Values.livenessProbe.successThreshold }}
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
+            httpGet:
+              path: /clients/
+              port: http
+          
+          readinessProbe:
+            initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
+            successThreshold: {{ .Values.readinessProbe.successThreshold }}
+            failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
+            httpGet:
+              path: /clients/
+              port: http
+
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

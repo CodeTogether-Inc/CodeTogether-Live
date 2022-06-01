@@ -20,7 +20,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.4.3.tgz
+    - releases/codetogether-1.4.3.tgz
     version: 1.4.3
   - apiVersion: v2
     appVersion: 2022.1.3
@@ -41,7 +41,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.4.2.tgz
+    - releases/codetogether-1.4.2.tgz
     version: 1.4.2
   - apiVersion: v2
     appVersion: 2022.1.0
@@ -62,7 +62,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.4.1.tgz
+    - releases/codetogether-1.4.1.tgz
     version: 1.4.1
   - apiVersion: v2
     appVersion: 2022.1.0
@@ -83,7 +83,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.4.0.tgz
+    - releases/codetogether-1.4.0.tgz
     version: 1.4.0
   - apiVersion: v2
     appVersion: 2022.1.0
@@ -104,7 +104,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.3.0.tgz
+    - releases/codetogether-1.3.0.tgz
     version: 1.3.0
   - apiVersion: v2
     appVersion: 5.0.1a-01149
@@ -125,7 +125,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.2.0.tgz
+    - releases/codetogether-1.2.0.tgz
     version: 1.2.0
   - apiVersion: v2
     appVersion: 5.0.0
@@ -146,7 +146,7 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.1.0.tgz
+    - releases/codetogether-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v2
     appVersion: 4.1.2
@@ -166,6 +166,6 @@ entries:
     name: codetogether
     type: application
     urls:
-    - codetogether-1.0.1.tgz
+    - releases/codetogether-1.0.1.tgz
     version: 1.0.1
 generated: "2022-05-19T10:26:45.311863219-05:00"

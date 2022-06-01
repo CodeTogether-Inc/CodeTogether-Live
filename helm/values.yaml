@@ -1,0 +1,239 @@
+# Default values for CodeTogether.
+# This is a YAML-formatted file.
+#
+# Kubernetes required version: v1.18+
+#
+# Example 'values.yaml' file for running CodeTogether On-Premises.
+# Use this file as a template to create your own 'codetogether-values.yaml' file.
+# For full detail on the chart's prerequisites, settings and configuration, please refer to our official Helm repository at:
+#   https://artifacthub.io/packages/helm/codetogether/codetogether
+
+replicaCount: 1
+
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: hub.edge.codetogether.com/releases/codetogether
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+#
+# Configure the source location for the Docker image, using the
+# credentials provided by your Genuitec Sales Representative.
+#
+imageCredentials:
+  enabled: true
+  registry: hub.edge.codetogether.com
+  username: "my-customer-username"
+  password: "my-customer-password"
+  email: unused
+
+#
+# Set this to 'true' if you are deploying CodeTogether in OpenShift.
+#
+openshift:
+  enabled: false
+
+#
+# CodeTogether license provided by your Genuitec Sales Representative.
+#
+license:
+  licensee: "Example"
+  maxConnections: "0"
+  expiration: "1970/01/01"
+  signature: "123456789abcdef"
+
+#
+# Set CodeTogether runing mode and server's FQDN (HTTPS is mandatory for CodeTogether)
+# Use 'direct' for simple evaluations and small deployments. Genuitec can provide
+# guidance on the best deployment option based on your needs.
+#
+codetogether:
+  # Supported values:
+  # 'direct' - runs a single self-contained CodeTogether backend
+  # 'locator-central' - runs a locator instance of CodeTogether with 1 or more edge servers
+  # 'locator-edge' - runs an edge server instance connecting to a locator
+  mode: "direct"
+  # The FQDN and URL for how this server will be known by clients on the network
+  url: https://codetogether.local
+  # HTTPS is required. If your cert is not a fully-rooted (trusted cert), set
+  # to true to allow more tolerance from clients
+  trustAllCerts: "true"
+  # Set a customized TZ for CodeTogether container (default is UTC)
+  # https://nodatime.org/TimeZones
+  timeZone:
+    enabled: false
+    region: "America/Chicago"
+
+#
+# Configure if CodeTogether is running in 'direct' mode.
+#
+direct: 
+  # When running in 'direct' mode, integration with StatsD or Prometheus can be
+  # enabled in the Docker file. For Locator deployments, configure dynamically
+  # on the locator's Dashboard.
+  metrics:
+    statsdEnabled: false
+    statsdHost: "https://my-graphite-fqdn"
+    statsdPort: "8125"
+    statsdProtocol: "UDP"
+    prometheusEnabled: false
+
+#
+# Configure if CodeTogether is running in 'locator-central' mode.
+#
+locatorCentral:
+  # A database is required for the central locator.
+  database:
+    host: "10.10.0.2"
+    port: 3306
+    schema: "codetogether"
+    # Supported values: 'mysql' or 'postgres'
+    dialect: "mysql"  
+    user: "my-db-username"
+    password: "my-db-password"
+    # Optionally enable SSL security to database
+    sslEnabled: false
+    # To get expected values, use `base64 <filename>` command, e.g. if the CA certificate file
+    # is ca.crt, then execute `base64 ca.crt` command and use the output as the sslCA value.
+    # sslKey: "my-db-ssl-key-base64-encoded"
+    # sslCA: "my-db-ssl-certificate-authority-base64-encoded"
+    # sslCert: "my-db-ssl-certificate-base64-encoded"
+    
+#
+# Configure if CodeTogether is running in 'locator-edge' mode.
+#
+locatorEdge:
+  # URL that the Locator is listening on.
+  locator: "https://codetogether.locator"
+  # Optional region which can have CIDR IP address regions assigned to 
+  # allowing regional routing of requests. Only enable if deploying
+  # CodeTogether to multiple regional data centers.
+  region: "default"
+
+#
+# Enables and configures Ingress (default = Nginx)
+# Replace the below 'codetogether.local' example with your server's FQDN
+#
+ingress:
+  enabled: false
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: codetogether.local
+      paths:
+      - path: /
+        pathType: "Prefix"
+        backend:
+          serviceName: codetogether.local
+          servicePort: 443
+  tls:
+    - secretName: codetogether-tls
+      hosts:
+        - codetogether.local
+
+#
+# CodeTogether has a dashboard to view metrics, and for the locator, update
+# configuration on the fly. If a custom username and password is not enabled,
+# one will be dynamically generated and shared in the log when the server 
+# starts up. Accessed at https://url/dashboard.
+#
+dashboard:
+  # Set to true to configure with the user and password below
+  enabled: false 
+  username: "my-dashboard-username"
+  password: "my-dashboard-password"
+
+#
+# Optionally enable CodeTogether A/V support. Available for 'direct' and
+# 'locator-edge' containers.
+#
+av:
+  enabled: false
+  # If auto, will attempt lookup of the IP address of the server. If the 
+  # container fails to start, IP address can be manually configured.
+  serverIP: "auto"
+  # Optional - If you want to use your own STUN servers, set this to 'true'
+  # and specify <server:port> separated by a comma ','.
+  stunServers: 
+    enabled: false
+    server: "coturn.example.com"
+    secret: "my-secret"
+
+#
+# Optionally enable integration with your SSO Provider. If using SSO, this
+# should be enabled on every CodeTogether server.
+#
+sso:
+  # Set this to 'true' if you are using an SSO provider.
+  enabled: false
+  # Replace below values with your actual SSO provider configuration.
+  provider: OKTA
+  systemBaseUrl: https://OKTA_DOMAIN/oauth2/default
+  clientID: "my-oidc-id"
+  clientSecret: "my-id-secret"
+  # Set this value to 'true' if you are using Oracle IDCS OpenID Connect.
+  jwksEndPointEnabled: false
+
+#
+# The following sections provide default configurations for the
+# container and normally do not need to be modified.
+# -------------------------------------------------------------------------
+#
+service:
+  type: ClusterIP
+  port: 443
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: "codetogether"
+
+podAnnotations: {}
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+readinessProbe:
+  initialDelaySeconds: 60
+  periodSeconds: 60
+  timeoutSeconds: 15
+  successThreshold: 1
+  failureThreshold: 1
+
+livenessProbe:
+  initialDelaySeconds: 60
+  periodSeconds: 60
+  timeoutSeconds: 15
+  successThreshold: 1
+  failureThreshold: 1
+
+resources: {}
+  # If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
