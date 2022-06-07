@@ -66,7 +66,6 @@ The following table lists configurable parameters of the CodeTogether chart and 
 | `locatorCentral.database.sslCA`    | Sets database SSL client certificate authority (base64 encoded)                |                                                     |
 | `locatorCentral.database.sslCert`  | Sets database SSL client certificate (base64 encoded)                          |                                                     |
 | `locatorEdge.locator`              | Sets JSON string configuration for `locator` mode database                     | `[sample included in the values.yaml file]`         || `locatorEdge.region`               | Sets a region in `edge-with-locator` mode so sessions can be routed out        | `default`                                           |
-| `openshift.enabled`                | Set this value to 'true' ONLY if you are deploying into OpenShift              | `false`                                             |
 | `service.type`                     | Service type                                                                   | `ClusterIP`                                         |
 | `service.port`                     | CodeTogether exposed service port                                              | `443`                                               |
 | `sso.enabled`                      | Enables SSO feature                                                            | `false`                                             |
@@ -96,11 +95,6 @@ $ oc new-project codetogether
 
 Now, you are in the `codetogether` namespace so can create the below K8s secrets and deployment.
 
-If your are using OpenShift, please set this value to `true` in your customized `codetogether-values.yaml` file:
-```
-openshift:
-  enabled: true
-```
 
 ## Edge Running Modes (CodeTogether v2022.1 and above)
 By default, CodeTogether will run in `direct` mode. For a multi-server deployment, you must run a single CodeTogether locator in `locator-central` mode, and as many edge servers as required in `locator-edge` mode.
