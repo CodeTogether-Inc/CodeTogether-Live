@@ -13,8 +13,12 @@ spec:
       {{- include "codetogether.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
+        checksum/coturn: {{ include (print $.Template.BasePath "/secret-coturn.yaml") . | sha256sum }}
+        checksum/dashboard: {{ include (print $.Template.BasePath "/secret-dashboard.yaml") . | sha256sum }}
+        checksum/license: {{ include (print $.Template.BasePath "/secret-license.yaml") . | sha256sum }}
+        checksum/sso: {{ include (print $.Template.BasePath "/secret-sso.yaml") . | sha256sum }}
+      {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
