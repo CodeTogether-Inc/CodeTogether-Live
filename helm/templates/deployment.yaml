@@ -72,15 +72,15 @@ spec:
               secretKeyRef:
                 name: {{ include "codetogether.fullname" . }}-ssl
                 key: key
-          {{- if .Values.locatorCentral.database.sslCert }}
           {{- end }}
+          {{- if .Values.locatorCentral.database.sslCert }}
           - name: CT_DB_SSL_CERT
             valueFrom:
               secretKeyRef:
                 name: {{ include "codetogether.fullname" . }}-ssl
                 key: cert
+          {{- end }}      
           {{- if .Values.locatorCentral.database.sslCA }}
-          {{- end }}
           - name: CT_DB_SSL_CA
             valueFrom:
               secretKeyRef:
