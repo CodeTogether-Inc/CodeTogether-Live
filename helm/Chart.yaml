@@ -4,7 +4,7 @@ description: CodeTogether is used to live share IDEs and coding sessions.
 
 type: application
 version: 1.4.4
-appVersion: "2022.1.5"
+appVersion: "2022.2.0"
 kubeVersion: ">= 1.18.0"
 
 icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
