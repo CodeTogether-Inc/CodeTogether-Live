@@ -48,9 +48,8 @@ The following table lists configurable parameters of the CodeTogether chart and 
 | `imageCredentials.email`           | Your registry login email                                                      | `unused`                                            |
 | `ingress.annotations`              | Specify ingress class                                                          | `kubernetes.io/ingress.class: nginx`                |
 | `ingress.enabled`                  | Enable ingress controller resource                                             | `true`                                              |
-| `ingress.hosts.paths`              | Paths to match against incoming requests                                       | `'[{'path': '/'}]`                                  |
-| `ingress.hosts`                    | Application hostnames                                                          | `codetogether.local`                                |
-| `ingress.tls`                      | Ingress TLS configuration                                                      | `[{name': codetogether-tls}]`                       |
+| `ingress.className`                | IngressClass used for ingress configuration                                    | `codetogether-nginx`                                |
+| `ingress.tls`                      | Ingress TLS configuration                                                      | `[{secretName': codetogether-tls}]`                 |
 | `license.licensee`                 | The license provided by Genuitec                                               | `Example`                                           |
 | `license.maxConnections`           | The maximum connection allowed by the license                                  | `0`                                                 |
 | `license.expiration`               | The license expiration date                                                    | `1970/12/31`                                        |

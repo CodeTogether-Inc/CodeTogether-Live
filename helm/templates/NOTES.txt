@@ -1,0 +1,5 @@
+Application URL:
+{{- if .Values.ingress.enabled }}
+  {{- $host := (urlParse .Values.codetogether.url).host }}
+  http{{ if $.Values.ingress.tls }}s{{ end }}://{{ $host }}{{ .path }}
+{{- end }}
