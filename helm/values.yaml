@@ -96,6 +96,9 @@ locatorCentral:
     password: "my-db-password"
     # Optionally enable SSL security to database
     sslEnabled: false
+    # sslKeys: false
+    # sslMode: "required"
+    # rejectUnauthorized: false
     # To get expected values, use `base64 <filename>` command, e.g. if the CA certificate file
     # is ca.crt, then execute `base64 ca.crt` command and use the output as the sslCA value.
     # sslKey: "my-db-ssl-key-base64-encoded"
@@ -118,22 +121,15 @@ locatorEdge:
 # Replace the below 'codetogether.local' example with your server's FQDN
 #
 ingress:
-  enabled: false
+  enabled: true
   annotations:
+    # for compatibility with old Kubernets, value will be taked or ignored
+    # based on the version
     kubernetes.io/ingress.class: nginx
-  className: ""
-  hosts:
-    - host: codetogether.local
-      paths:
-      - path: /
-        pathType: "Prefix"
-        backend:
-          serviceName: codetogether.local
-          servicePort: 443
+  # className is a value that will be used if Kubernetes version >= 1.18
+  className: codetogether-nginx
   tls:
     - secretName: codetogether-tls
-      hosts:
-        - codetogether.local
 
 #
 # CodeTogether has a dashboard to view metrics, and for the locator, update

@@ -1,6 +1,16 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "codetogether.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
+{{- $host := (urlParse .Values.codetogether.url).host }}
+{{- if and .Values.ingress.className (semverCompare ">=1.18" .Capabilities.KubeVersion.GitVersion) }}
+  {{- if (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class") }}
+    {{- $_ := unset .Values.ingress.annotations "kubernetes.io/ingress.class"}}
+  {{- end }}
+{{- else -}}
+  {{- if and .Values.ingress.className (not (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class")) }}
+    {{- $_ := set .Values.ingress.annotations "kubernetes.io/ingress.class" .Values.ingress.className}}
+  {{- end }}
+{{- end }}
 {{- if semverCompare ">=1.19" .Capabilities.KubeVersion.GitVersion -}}
 apiVersion: networking.k8s.io/v1
 {{- else -}}
@@ -16,28 +26,24 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-{{- if and .Values.ingress.className (semverCompare ">=1.18" .Capabilities.KubeVersion.GitVersion) }}
+  {{- if and .Values.ingress.className (semverCompare ">=1.18" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}
-{{- end }}
+  {{- end}}
   {{- if .Values.ingress.tls }}
   tls:
     {{- range .Values.ingress.tls }}
     - hosts:
-        {{- range .hosts }}
-        - {{ . | quote }}
-        {{- end }}
+        - {{ $host | quote }}
       secretName: {{ .secretName }}
     {{- end }}
   {{- end }}
   rules:
-    {{- range .Values.ingress.hosts }}
-    - host: {{ .host | quote }}
+    - host: {{ $host | quote }}
       http:
         paths:
-          {{- range .paths }}
-          - path: {{ .path }}
-            {{- if and .pathType (semverCompare ">=1.18" $.Capabilities.KubeVersion.GitVersion) }}
-            pathType: {{ .pathType }}
+          - path: /
+            {{- if (semverCompare ">=1.18" $.Capabilities.KubeVersion.GitVersion) }}
+            pathType: "Prefix"
             {{- end }}
             backend:
               {{- if semverCompare ">=1.19" $.Capabilities.KubeVersion.GitVersion }}
@@ -49,6 +55,4 @@ spec:
               serviceName: {{ $fullName }}
               servicePort: {{ $svcPort }}
               {{- end }}
-          {{- end }}
-    {{- end }}
 {{- end }}
