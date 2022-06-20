@@ -66,17 +66,21 @@ spec:
           - name: CT_LOCATOR_CONFIG
             value: {{ .Values.locatorCentral | toJson | quote }}
           {{- end }}
-          {{- if .Values.locatorCentral.database.sslEnabled }}
+          {{- if .Values.locatorCentral.database.sslKey }}
           - name: CT_DB_SSL_KEY
             valueFrom:
               secretKeyRef:
                 name: {{ include "codetogether.fullname" . }}-ssl
                 key: key
+          {{- if .Values.locatorCentral.database.sslCert }}
+          {{- end }}
           - name: CT_DB_SSL_CERT
             valueFrom:
               secretKeyRef:
                 name: {{ include "codetogether.fullname" . }}-ssl
                 key: cert
+          {{- if .Values.locatorCentral.database.sslCA }}
+          {{- end }}
           - name: CT_DB_SSL_CA
             valueFrom:
               secretKeyRef:
