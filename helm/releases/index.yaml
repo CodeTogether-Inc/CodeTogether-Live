@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  codetogether:
+  - apiVersion: v2
+    appVersion: 2022.2.0
+    created: "2022-06-21T06:56:58.788826037-05:00"
+    description: CodeTogether is used to live share IDEs and coding sessions.
+    digest: 3e227d714f4150b355f80f0cb252f35550f535402add52d36646e27507c8bbd1
+    home: https://www.codetogether.com
+    icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
+    keywords:
+    - codetogether
+    - collaborative
+    - pair
+    - programming
+    kubeVersion: '>= 1.18.0'
+    maintainers:
+    - email: info@codetogether.com
+      name: Genuitec, LLC
+    name: codetogether
+    type: application
+    urls:
+    - codetogether-1.4.4.tgz
+    version: 1.4.4
+generated: "2022-06-21T06:56:58.787345332-05:00"
