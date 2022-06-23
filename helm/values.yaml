@@ -14,7 +14,10 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: hub.edge.codetogether.com/releases/codetogether
+  # By default use DockerHub repository.
+  repository: codetogether/codetogether
+  # Uncomment to use CodeTogether private Docker registry.
+  # repository: hub.edge.codetogether.com/releases/codetogether
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -24,7 +27,8 @@ image:
 # credentials provided by your Genuitec Sales Representative.
 #
 imageCredentials:
-  enabled: true
+  # Configure credentials if using private Docker registry.
+  enabled: false
   registry: hub.edge.codetogether.com
   username: "my-customer-username"
   password: "my-customer-password"
