@@ -132,6 +132,8 @@ ingress:
     kubernetes.io/ingress.class: nginx
   # className is a value that will be used if Kubernetes version >= 1.18
   className: codetogether-nginx
+  # Controller-value of the controller that is processing this ingressClass
+  controllerValue: k8s.io/ingress-nginx
   tls:
     - secretName: codetogether-tls
 
