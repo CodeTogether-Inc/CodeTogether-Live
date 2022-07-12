@@ -49,6 +49,7 @@ The following table lists configurable parameters of the CodeTogether chart and 
 | `ingress.annotations`              | Specify ingress class                                                          | `kubernetes.io/ingress.class: nginx`                |
 | `ingress.enabled`                  | Enable ingress controller resource                                             | `true`                                              |
 | `ingress.className`                | IngressClass used for ingress configuration                                    | `codetogether-nginx`                                |
+| `ingress.controllerValue`          | IngressClass Controller value used for ingress configuration                   | `k8s.io/ingress-nginx`                              |
 | `ingress.tls`                      | Ingress TLS configuration                                                      | `[{secretName': codetogether-tls}]`                 |
 | `license.licensee`                 | The license provided by Genuitec                                               | `Example`                                           |
 | `license.maxConnections`           | The maximum connection allowed by the license                                  | `0`                                                 |
@@ -64,7 +65,8 @@ The following table lists configurable parameters of the CodeTogether chart and 
 | `locatorCentral.database.sslKey`   | Sets database SSL client key (base64 encoded)                                  |                                                     |
 | `locatorCentral.database.sslCA`    | Sets database SSL client certificate authority (base64 encoded)                |                                                     |
 | `locatorCentral.database.sslCert`  | Sets database SSL client certificate (base64 encoded)                          |                                                     |
-| `locatorEdge.locator`              | Sets JSON string configuration for `locator` mode database                     | `[sample included in the values.yaml file]`         || `locatorEdge.region`               | Sets a region in `edge-with-locator` mode so sessions can be routed out        | `default`                                           |
+| `locatorEdge.locator`              | Sets JSON string configuration for `locator` mode database                     | `[sample included in the values.yaml file]`         |
+| `locatorEdge.region`               | Sets a region in `edge-with-locator` mode so sessions can be routed out        | `default`                                           |
 | `openshift.enabled`                | Set this value to 'true' ONLY if you are deploying into OpenShift              | `false`                                             |
 | `service.type`                     | Service type                                                                   | `ClusterIP`                                         |
 | `service.port`                     | CodeTogether exposed service port                                              | `443`                                               |
