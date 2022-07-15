@@ -35,12 +35,6 @@ imageCredentials:
   email: unused
 
 #
-# Set this to 'true' if you are deploying CodeTogether in OpenShift.
-#
-openshift:
-  enabled: false
-
-#
 # CodeTogether license provided by your Genuitec Sales Representative.
 #
 license:
@@ -124,6 +118,7 @@ locatorEdge:
 # Enables and configures Ingress (default = Nginx)
 # Replace the below 'codetogether.local' example with your server's FQDN
 #
+# Openshift: Creating a route through an Ingress object https://docs.openshift.com/container-platform/4.10/networking/routes/route-configuration.html#nw-ingress-creating-a-route-via-an-ingress_route-configuration
 ingress:
   enabled: true
   annotations:
