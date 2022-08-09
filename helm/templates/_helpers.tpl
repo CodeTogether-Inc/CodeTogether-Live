@@ -70,3 +70,17 @@ https://helm.sh/docs/howto/charts_tips_and_tricks/#creating-image-pull-secrets
 {{- printf "{\"auths\":{\"%s\":{\"username\":\"%s\",\"password\":\"%s\",\"email\":\"%s\",\"auth\":\"%s\"}}}" .registry .username .password .email (printf "%s:%s" .username .password | b64enc) | b64enc }}
 {{- end }}
 {{- end }}
+
+{{/*
+Get Proxy secret name
+*/}}
+{{- define "codetogether.proxy.secretName" }}
+{{- if .Values.proxy.existingSecret }}
+  {{- .Values.proxy.existingSecret }}
+{{- else }}
+  {{- $fullName := include "codetogether.fullname" . -}}
+  {{- with .Values.proxy }}
+    {{- printf "%s-proxy-secret" $fullName }}
+  {{- end }}
+{{- end }}
+{{- end }}

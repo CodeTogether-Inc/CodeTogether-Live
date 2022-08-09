@@ -223,3 +223,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# @since 2022.2.1-1350
+proxy:
+  enabled: false
+  # Proxy URI format, omit credentials if unauthenticated:
+  # http|https|socks://myuser:mypassword@myproxyhost.com:port
+  uri: ""
+  # Name of existing secret to use for proxy URI. If specified,
+  # then proxy.uri will be ignored and picked up from this secret.
+  # existingSecret: ""

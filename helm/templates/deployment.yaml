@@ -152,6 +152,14 @@ spec:
                 name: {{ include "codetogether.fullname" . }}-dashboard
                 key: password
           {{- end }}
+          {{- if .Values.proxy.enabled }}
+          - name: CT_PROXY
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "codetogether.proxy.secretName" . }}
+                key: proxy-uri
+          {{- end}}
+
 
           #
           # Set SSO configuration

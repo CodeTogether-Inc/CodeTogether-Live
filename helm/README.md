@@ -74,6 +74,9 @@ The following table lists configurable parameters of the CodeTogether chart and 
 | `sso.clientID`                     | The SSO client ID                                                              | `my-oidc-id`                                        |
 | `sso.clientSecret`                 | The SSO client secret                                                          | `my-oidc-secret`                                    |
 | `sso.jwksEndPointEnabled`          | Set to 'true' when the SSO URL for accessing public keys is protected (IDCS)   | `false`                                             |
+| `proxy.enabled`                    | Enables proxy                                                                  | `false`                                             |
+| `proxy.uri`                        | Sets the proxy URI (format: `http\|https\|socks://myuser:mypassword@myproxyhost.com:port`). Ignored if `proxy.existingSecret` with key proxy-uri is provided | `""`                                                |
+| `proxy.existingSecret`             | Name of existing secret to use for proxy URI. `proxy.uri` will be ignored and picked up from this secret. | `""`                                                |
 
 ## Creating your Kubernetes Namespace for CodeTogether
 
