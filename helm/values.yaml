@@ -127,10 +127,12 @@ locatorEdge:
 ingress:
   enabled: true
   annotations:
-    # for compatibility with old Kubernets, value will be taked or ignored
-    # based on the version
-    kubernetes.io/ingress.class: nginx
-  # className is a value that will be used if Kubernetes version >= 1.18
+    # For reference: This is required for k8 version <= 1.8
+    # kubernetes.io/ingress.class: nginx
+  # There are 3 ways to handle ingressClassName for the CodeTogether Ingress object:
+  # (1) set className to 'codetogether-nginx' to use the predefined IngressClass (Default)
+  # (2) set className to a custom value to use your own IngressClass
+  # (3) do not specify className to rely on the default IngressClass for the cluster
   className: codetogether-nginx
   tls:
     - secretName: codetogether-tls
