@@ -72,6 +72,17 @@ https://helm.sh/docs/howto/charts_tips_and_tricks/#creating-image-pull-secrets
 {{- end }}
 
 {{/*
+Get Dashboard secret name
+*/}}
+{{- define "codetogether.dashboardSecretName" }}
+{{- if .Values.dashboard.existingSecret }}
+    {{- printf "%s" .Values.dashboard.existingSecret }}
+{{- else }}
+    {{- printf "%s-dashboard"  (include "codetogether.fullname" .) }}
+{{- end }}
+{{- end }}
+
+{{/*
 Get Proxy secret name
 */}}
 {{- define "codetogether.proxy.secretName" }}

@@ -148,6 +148,9 @@ dashboard:
   enabled: false
   username: "my-dashboard-username"
   password: "my-dashboard-password"
+  # Name of existing secret to use for Dashboard credentials. If specfied,
+  # then dashboard.username and dashboard.password will be ignored and picked up from this secret.
+  # existingSecret: ""
 
 #
 # Optionally enable CodeTogether A/V support. Available for 'direct' and

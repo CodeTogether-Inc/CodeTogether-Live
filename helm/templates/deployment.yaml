@@ -77,7 +77,7 @@ spec:
               secretKeyRef:
                 name: {{ include "codetogether.fullname" . }}-ssl
                 key: cert
-          {{- end }}      
+          {{- end }}
           {{- if .Values.locatorCentral.database.sslCA }}
           - name: CT_DB_SSL_CA
             valueFrom:
@@ -144,12 +144,12 @@ spec:
           - name: CT_DASHBOARD_USER
             valueFrom:
               secretKeyRef:
-                name: {{ include "codetogether.fullname" . }}-dashboard
+                name: {{ include "codetogether.dashboardSecretName" . }}
                 key: username
           - name: CT_DASHBOARD_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: {{ include "codetogether.fullname" . }}-dashboard
+                name: {{ include "codetogether.dashboardSecretName" . }}
                 key: password
           {{- end }}
           {{- if .Values.proxy.enabled }}
@@ -159,7 +159,6 @@ spec:
                 name: {{ include "codetogether.proxy.secretName" . }}
                 key: proxy-uri
           {{- end}}
-
 
           #
           # Set SSO configuration

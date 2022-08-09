@@ -18,65 +18,67 @@ This chart has been created with Helm v3 and tested it with:
 
 The following table lists configurable parameters of the CodeTogether chart and their default values (A-Z).
 
-| Parameter                          | Description                                                                    | Default                                             |
-| ---------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `av.enabled`                       | Enables CodeTogether A/V sessions (if set to `false`, A/V will be turned off ) | `false`                                             |
-| `av.serverIP`                      | Sets the LAN IP to use for A/V sessions                                        | `auto`                                              |
-| `av.stunServers.enabled`           | Enables use of private STUN servers for A/V                                    | `false`                                             |
-| `av.stunServers.server`            | Set your private coTURN fallback server                                        | `coturn.example.com`                                |
-| `av.stunServers.secret`            | The secret you set up in the coTURN server                                     | `my-secret`                                         |
-| `codetogether.mode`                | Sets Locator running mode: `direct`, `locator-central` or `locator-edge`       | `direct`                                            |
-| `codetogether.url`                 | The CodeTogether server URL that matches the Ingress config (if enabled)       | `https://codetogether.local`                        |
-| `codetogether.trustAllCerts`       | Allow the use of untrusted certifictates                                       | `true`                                              |
-| `codetogether.timeZone.enabled`    | Enables a customized TZ for CodeTogether container (default is UTC)            | `false`                                             |
-| `codetogether.timeZone.region`     | Sets the TZ for the CodeTogether container (https://nodatime.org/TimeZones)    | `America/Chicago`                                   |
-| `dashboard.enabled`                | Enables below `dashboard.username` and `dashboard.password` for HTTP Auth      | `false`                                             |
-| `dashboard.username`               | Sets the HTTP Auth credentials to login into the '/dashboard' area             | `my-dashboard-username`                             |
-| `dashboard.password`               | The SSO client secret                                                          | `my-dashboard-password`                             |
-| `direct.metrics.statsdEnabled`     | Enables Metrics collecting                                                     | `false`                                             |
-| `direct.metrics.statsdHost`        | StatsD host FQDN (like a Graphite server)                                      | `https://my-graphite-fqdn`                          |
-| `direct.metrics.statsdPort`        | StatsD server port                                                             | `8125`                                              |
-| `direct.metrics.statsdProtocol`    | StatsD server protocol                                                         | `UDP`                                               |
-| `direct.metrics.prometheusEnabled` | Enables Prometheus metrics collecting                                          | `false`                                             |
-| `image.pullPolicy`                 | Container image pull policy                                                    | `Always`                                            |
-| `image.repository`                 | Repository URL from which the CodeTogether image will be pulled out            | `hub.edge.codetogether.com/releases/codetogether`   |
-| `image.tag`                        | Container image tag                                                            | `latest`                                            |
-| `imageCredentials.enabled`         | Set this to 'true' if you are meant to login into a Registry                   | `true`                                              |
-| `imageCredentials.enabled`         | The registry FQDN you want to login into                                       | `hub.edge.codetogether.com`                         |
-| `imageCredentials.username`        | Your registry login user name                                                  | `my-customer-username`                              |
-| `imageCredentials.password`        | Your registry login password                                                   | `my-customer-password`                              |
-| `imageCredentials.email`           | Your registry login email                                                      | `unused`                                            |
-| `ingress.annotations`              | Specify ingress class                                                          | `kubernetes.io/ingress.class: nginx`                |
-| `ingress.enabled`                  | Enable ingress controller resource                                             | `true`                                              |
-| `ingress.className`                | IngressClass used for ingress configuration                                    | `codetogether-nginx`                                |
-| `ingress.tls`                      | Ingress TLS configuration                                                      | `[{secretName': codetogether-tls}]`                 |
-| `license.licensee`                 | The license provided by Genuitec                                               | `Example`                                           |
-| `license.maxConnections`           | The maximum connection allowed by the license                                  | `0`                                                 |
-| `license.expiration`               | The license expiration date                                                    | `1970/12/31`                                        |
-| `license.signature`                | The license signature                                                          | `123456789abcdef`                                   |
-| `locatorCentral.database.host`     | Sets database host IP - it must be reachable from the CodeTogether container   | `10.10.0.2`                                         |
-| `locatorCentral.database.port`     | Sets database port                                                             | `3306`                                              |
-| `locatorCentral.database.schema`   | Sets database schema (database) name                                           | `codetogether`                                      |
-| `locatorCentral.database.dialect`  | Sets database dialect (either MySQL or Postgress)                              | `mysql`                                             |
-| `locatorCentral.database.user`     | Sets database user name                                                        | `my-db-username`                                    |
-| `locatorCentral.database.password` | Sets database password                                                         | `my-db-password`                                    |
-| `locatorCentral.database.sslEnabled` | Enable SSL security to database                                              | `false`                                             |
-| `locatorCentral.database.sslKey`   | Sets database SSL client key (base64 encoded)                                  |                                                     |
-| `locatorCentral.database.sslCA`    | Sets database SSL client certificate authority (base64 encoded)                |                                                     |
-| `locatorCentral.database.sslCert`  | Sets database SSL client certificate (base64 encoded)                          |                                                     |
-| `locatorEdge.locator`              | Sets JSON string configuration for `locator` mode database                     | `[sample included in the values.yaml file]`         || `locatorEdge.region`               | Sets a region in `edge-with-locator` mode so sessions can be routed out        | `default`                                           |
-| `openshift.enabled`                | Set this value to 'true' ONLY if you are deploying into OpenShift              | `false`                                             |
-| `service.type`                     | Service type                                                                   | `ClusterIP`                                         |
-| `service.port`                     | CodeTogether exposed service port                                              | `443`                                               |
-| `sso.enabled`                      | Enables SSO feature                                                            | `false`                                             |
-| `sso.provider`                     | SSO vendor's name (recognized values are: OKTA and MICROSOFT)                  | `OKTA`                                              |
-| `sso.systemBaseUrl`                | The base URL for your identity system - aka. Domain, Realm, etc.               | `https://OKTA_DOMAIN/oauth2/default`                |
-| `sso.clientID`                     | The SSO client ID                                                              | `my-oidc-id`                                        |
-| `sso.clientSecret`                 | The SSO client secret                                                          | `my-oidc-secret`                                    |
-| `sso.jwksEndPointEnabled`          | Set to 'true' when the SSO URL for accessing public keys is protected (IDCS)   | `false`                                             |
-| `proxy.enabled`                    | Enables proxy                                                                  | `false`                                             |
-| `proxy.uri`                        | Sets the proxy URI (format: `http\|https\|socks://myuser:mypassword@myproxyhost.com:port`). Ignored if `proxy.existingSecret` with key proxy-uri is provided | `""`                                                |
-| `proxy.existingSecret`             | Name of existing secret to use for proxy URI. `proxy.uri` will be ignored and picked up from this secret. | `""`                                                |
+| Parameter                                    | Description                                                                                                                                                                | Default                                                     |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `av.enabled`                                 | Enables CodeTogether A/V sessions (if set to `false`, A/V will be turned off )                                                                                             | `false`                                                     |
+| `av.serverIP`                                | Sets the LAN IP to use for A/V sessions                                                                                                                                    | `auto`                                                      |
+| `av.stunServers.enabled`                     | Enables use of private STUN servers for A/V                                                                                                                                | `false`                                                     |
+| `av.stunServers.server`                      | Set your private coTURN fallback server                                                                                                                                    | `coturn.example.com`                                        |
+| `av.stunServers.secret`                      | The secret you set up in the coTURN server                                                                                                                                 | `my-secret`                                                 |
+| `codetogether.mode`                          | Sets Locator running mode: `direct`, `locator-central` or `locator-edge`                                                                                                   | `direct`                                                    |
+| `codetogether.url`                           | The CodeTogether server URL that matches the Ingress config (if enabled)                                                                                                   | `https://codetogether.local`                                |
+| `codetogether.trustAllCerts`                 | Allow the use of untrusted certifictates                                                                                                                                   | `true`                                                      |
+| `codetogether.timeZone.enabled`              | Enables a customized TZ for CodeTogether container (default is UTC)                                                                                                        | `false`                                                     |
+| `codetogether.timeZone.region`               | Sets the TZ for the CodeTogether container (https://nodatime.org/TimeZones)                                                                                                | `America/Chicago`                                           |
+| `dashboard.enabled`                          | Enables credentials customization for the '/dashboard' area. If not enabled, random credentials are generated                                                              | `false`                                                     |
+| `dashboard.username`                         | Username for the '/dashboard' area. Ignored if `dashboard.existingSecret` is provided                                                                                      | `my-dashboard-username`                                     |
+| `dashboard.password`                         | Password for the '/dashboard' area. Ignored if `dashboard.existingSecret` is provided                                                                                      | `my-dashboard-password`                                     |
+| `dashboard.existingSecret`                   | Name of existing secret to use for Dashboard credentials. `dashboard.username` and `dashboard.password` will be ignored and picked up from this secret.                    | `""`                                                        |
+| `direct.metrics.statsdEnabled`               | Enables Metrics collecting                                                                                                                                                 | `false`                                                     |
+| `direct.metrics.statsdHost`                  | StatsD host FQDN (like a Graphite server)                                                                                                                                  | `https://my-graphite-fqdn`                                  |
+| `direct.metrics.statsdPort`                  | StatsD server port                                                                                                                                                         | `8125`                                                      |
+| `direct.metrics.statsdProtocol`              | StatsD server protocol                                                                                                                                                     | `UDP`                                                       |
+| `direct.metrics.prometheusEnabled`           | Enables Prometheus metrics collecting                                                                                                                                      | `false`                                                     |
+| `image.pullPolicy`                           | Container image pull policy                                                                                                                                                | `Always`                                                    |
+| `image.repository`                           | Repository URL from which the CodeTogether image will be pulled out                                                                                                        | `hub.edge.codetogether.com/releases/codetogether`           |
+| `image.tag`                                  | Container image tag                                                                                                                                                        | `latest`                                                    |
+| `imageCredentials.enabled`                   | Set this to 'true' if you are meant to login into a Registry                                                                                                               | `true`                                                      |
+| `imageCredentials.enabled`                   | The registry FQDN you want to login into                                                                                                                                   | `hub.edge.codetogether.com`                                 |
+| `imageCredentials.username`                  | Your registry login user name                                                                                                                                              | `my-customer-username`                                      |
+| `imageCredentials.password`                  | Your registry login password                                                                                                                                               | `my-customer-password`                                      |
+| `imageCredentials.email`                     | Your registry login email                                                                                                                                                  | `unused`                                                    |
+| `ingress.annotations`                        | Specify ingress class                                                                                                                                                      | `kubernetes.io/ingress.class: nginx`                        |
+| `ingress.enabled`                            | Enable ingress controller resource                                                                                                                                         | `true`                                                      |
+| `ingress.className`                          | IngressClass used for ingress configuration                                                                                                                                | `codetogether-nginx`                                        |
+| `ingress.tls`                                | Ingress TLS configuration                                                                                                                                                  | `[{secretName': codetogether-tls}]`                         |
+| `license.licensee`                           | The license provided by Genuitec                                                                                                                                           | `Example`                                                   |
+| `license.maxConnections`                     | The maximum connection allowed by the license                                                                                                                              | `0`                                                         |
+| `license.expiration`                         | The license expiration date                                                                                                                                                | `1970/12/31`                                                |
+| `license.signature`                          | The license signature                                                                                                                                                      | `123456789abcdef`                                           |
+| `locatorCentral.database.host`               | Sets database host IP - it must be reachable from the CodeTogether container                                                                                               | `10.10.0.2`                                                 |
+| `locatorCentral.database.port`               | Sets database port                                                                                                                                                         | `3306`                                                      |
+| `locatorCentral.database.schema`             | Sets database schema (database) name                                                                                                                                       | `codetogether`                                              |
+| `locatorCentral.database.dialect`            | Sets database dialect (either MySQL or Postgress)                                                                                                                          | `mysql`                                                     |
+| `locatorCentral.database.user`               | Sets database user name                                                                                                                                                    | `my-db-username`                                            |
+| `locatorCentral.database.password`           | Sets database password                                                                                                                                                     | `my-db-password`                                            |
+| `locatorCentral.database.sslEnabled`         | Enable SSL security to database                                                                                                                                            | `false`                                                     |
+| `locatorCentral.database.sslKey`             | Sets database SSL client key (base64 encoded)                                                                                                                              |                                                             |
+| `locatorCentral.database.sslCA`              | Sets database SSL client certificate authority (base64 encoded)                                                                                                            |                                                             |
+| `locatorCentral.database.sslCert`            | Sets database SSL client certificate (base64 encoded)                                                                                                                      |                                                             |
+| `locatorEdge.locator`                        | Sets JSON string configuration for `locator` mode database                                                                                                                 | `[sample included in the values.yaml file]`                 |
+| `locatorEdge.region`                         | Sets a region in `edge-with-locator` mode so sessions can be routed out                                                                                                    | `default`                                                   |
+| `openshift.enabled`                          | Set this value to 'true' ONLY if you are deploying into OpenShift                                                                                                          | `false`                                                     |
+| `service.type`                               | Service type                                                                                                                                                               | `ClusterIP`                                                 |
+| `service.port`                               | CodeTogether exposed service port                                                                                                                                          | `443`                                                       |
+| `sso.enabled`                                | Enables SSO feature                                                                                                                                                        | `false`                                                     |
+| `sso.provider`                               | SSO vendor's name (supported values: OKTA, MICROSOFT, IDCS, KEYCLOAK or ONELOGIN)                                                                                          | `OKTA`                                                      |
+| `sso.systemBaseUrl`                          | The base URL for your identity system - aka. Domain, Realm, etc.                                                                                                           | `https://OKTA_DOMAIN/oauth2/default`                        |
+| `sso.clientID`                               | The SSO client ID                                                                                                                                                          | `my-oidc-id`                                                |
+| `sso.clientSecret`                           | The SSO client secret                                                                                                                                                      | `my-oidc-secret`                                            |
+| `sso.jwksEndPointEnabled`                    | Set to 'true' when the SSO URL for accessing public keys is protected (IDCS)                                                                                               | `false`                                                     |
+| `proxy.enabled`                              | Enables proxy                                                                                                                                                              | `false`                                                     |
+| `proxy.uri`                                  | Sets the proxy URI (format: `http\|https\|socks://myuser:mypassword@myproxyhost.com:port`). Ignored if `proxy.existingSecret` with key proxy-uri is provided               | `""`                                                        |
+| `proxy.existingSecret`                       | Name of existing secret to use for proxy URI. `proxy.uri` will be ignored and picked up from this secret.                                                                  | `""`                                                        |
 
 ## Creating your Kubernetes Namespace for CodeTogether
 
@@ -165,6 +167,34 @@ with user: <userName>
 using a temporary password: <randomGeneratedPassword>
 Use CT_DASHBOARD_USER and CT_DASHBOARD_PASSWORD to set explicit values for this deployment.
 ```
+## Managing Sensitive Data
+
+To avoid having some sensitive data specified in the values.yaml file directly, you can create you own Kubernetes Secrets. Below is an example of a Secret that can be used as a template:
+
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  annotations:
+    # Caution: please change the release name to match the one used during CodeTogether chart installation
+    meta.helm.sh/release-name: codetogether 
+    meta.helm.sh/release-namespace: default
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: mysecret
+type: Opaque
+data:
+  # for providing dasboard.username value (base64 encoded)
+  username: bXktZGFzaGJvYXJkLXVzZXJuYW1l 
+  # for providing dashboard.password value (base64 encoded)
+  password: bXktZGFzaGJvYXJkLXBhc3N3b3Jk
+  # for providing proxy.uri value (base64 encoded)
+  proxy-uri: CXVtZGFzaGJvYXJkLXBhc3N3b3Jk
+```
+
+Once you create a file based on the template above, you can create a Secret by executing the following command:
+
+`kubectl apply -f mysecret.yaml`
 
 ## Pulling out the Chart
 Add our CodeTogether repository to your Helm environment and pull our chart:
