@@ -190,7 +190,6 @@ As you already know, in `Helm` you can specify a parameter using the `--set key=
 
 ```bash
 $ helm install codetogether \
-  --set replicaCount=1 \
   --set service.port=8080 \
   ./codetogether
 ```

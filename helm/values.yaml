@@ -143,7 +143,7 @@ ingress:
 #
 dashboard:
   # Set to true to configure with the user and password below
-  enabled: false 
+  enabled: false
   username: "my-dashboard-username"
   password: "my-dashboard-password"
 
@@ -215,23 +215,6 @@ livenessProbe:
   timeoutSeconds: 15
   successThreshold: 1
   failureThreshold: 1
-
-resources: {}
-  # If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 1
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 
