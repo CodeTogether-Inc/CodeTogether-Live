@@ -3,7 +3,28 @@ entries:
   codetogether:
   - apiVersion: v2
     appVersion: 2022.2.1
-    created: "2022-07-12T10:40:57.116114+02:00"
+    created: "2022-08-10T05:09:06.484836102-05:00"
+    description: CodeTogether is used to live share IDEs and coding sessions.
+    digest: 879d91e073ace0a8cc581c559d3f3d725ed979ac306bb2e309c72c3520cdeacc
+    home: https://www.codetogether.com
+    icon: https://www.codetogether.com/wp-content/uploads/2020/02/codetogether-circle-128.png
+    keywords:
+    - codetogether
+    - collaborative
+    - pair
+    - programming
+    kubeVersion: '>= 1.18.0'
+    maintainers:
+    - email: info@codetogether.com
+      name: Genuitec, LLC
+    name: codetogether
+    type: application
+    urls:
+    - releases/codetogether-1.4.7.tgz
+    version: 1.4.7
+  - apiVersion: v2
+    appVersion: 2022.2.1
+    created: "2022-08-10T05:09:06.483507275-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 6a142e6e12be113ed703e07ffcbe533695b7d5ac81433b6be2320f314396654f
     home: https://www.codetogether.com
@@ -24,7 +45,7 @@ entries:
     version: 1.4.6
   - apiVersion: v2
     appVersion: 2022.2.0
-    created: "2022-07-12T10:40:57.115365+02:00"
+    created: "2022-08-10T05:09:06.481275317-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 211073479828a027259680a8d8773e912400f7d86845a42fe441cc1a21ccaa09
     home: https://www.codetogether.com
@@ -45,7 +66,7 @@ entries:
     version: 1.4.5
   - apiVersion: v2
     appVersion: 2022.2.0
-    created: "2022-07-12T10:40:57.113737+02:00"
+    created: "2022-08-10T05:09:06.478484367-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 3e227d714f4150b355f80f0cb252f35550f535402add52d36646e27507c8bbd1
     home: https://www.codetogether.com
@@ -66,7 +87,7 @@ entries:
     version: 1.4.4
   - apiVersion: v2
     appVersion: 2022.1.5
-    created: "2022-07-12T10:40:57.112753+02:00"
+    created: "2022-08-10T05:09:06.476867202-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: b5908da094a375c70caaeac57f0d8c95fe9d5a92242f9d682423e451c939052a
     home: https://www.codetogether.com
@@ -87,7 +108,7 @@ entries:
     version: 1.4.3
   - apiVersion: v2
     appVersion: 2022.1.3
-    created: "2022-07-12T10:40:57.112123+02:00"
+    created: "2022-08-10T05:09:06.474850619-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: d68853aacddf6f19e7ff2af111bb07e71c1d13757ffbebbde7341f464efcb986
     home: https://www.codetogether.com
@@ -108,7 +129,7 @@ entries:
     version: 1.4.2
   - apiVersion: v2
     appVersion: 2022.1.0
-    created: "2022-07-12T10:40:57.111498+02:00"
+    created: "2022-08-10T05:09:06.473336304-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 33b0fd200a818af04b69e9b8fabe58c1afc31ed47e52043fd25a0f7ae6f52135
     home: https://www.codetogether.com
@@ -129,7 +150,7 @@ entries:
     version: 1.4.1
   - apiVersion: v2
     appVersion: 2022.1.0
-    created: "2022-07-12T10:40:57.110835+02:00"
+    created: "2022-08-10T05:09:06.471730004-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 1a1d6012301b12572102861077d09d42e79291547e53b779dc4f66e100fd96c4
     home: https://www.codetogether.com
@@ -150,7 +171,7 @@ entries:
     version: 1.4.0
   - apiVersion: v2
     appVersion: 2022.1.0
-    created: "2022-07-12T10:40:57.110163+02:00"
+    created: "2022-08-10T05:09:06.470090514-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 0e91cf8c3f9ef8d9c0a7c654b583427d369331acad12fe2d6fdb29057eb8473f
     home: https://www.codetogether.com
@@ -171,7 +192,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 5.0.1a-01149
-    created: "2022-07-12T10:40:57.10935+02:00"
+    created: "2022-08-10T05:09:06.468504699-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 65cd7813bb1d4029fbd8cdbaa5774b6b92b459c7e1304e19ffcd8659511dc9ea
     home: https://www.codetogether.com
@@ -192,7 +213,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 5.0.0
-    created: "2022-07-12T10:40:57.108708+02:00"
+    created: "2022-08-10T05:09:06.464769766-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 489c94d4f9b647ec1d396fb92c55cca470035b05852d1b5d6d69f36ad8d6f923
     home: https://www.codetogether.com
@@ -213,7 +234,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 4.1.2
-    created: "2022-07-12T10:40:57.10811+02:00"
+    created: "2022-08-10T05:09:06.463546655-05:00"
     description: CodeTogether is used to live share IDEs and coding sessions.
     digest: 8a45127198499b0719183c0ea270bf6409394854a08c49ab9263a7c6641b1b53
     home: https://www.codetogether.com
@@ -231,4 +252,4 @@ entries:
     urls:
     - releases/codetogether-1.0.1.tgz
     version: 1.0.1
-generated: "2022-07-12T10:40:57.107207+02:00"
+generated: "2022-08-10T05:09:06.461990819-05:00"
