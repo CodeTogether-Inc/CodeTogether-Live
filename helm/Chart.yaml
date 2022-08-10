@@ -3,7 +3,7 @@ name: codetogether
 description: CodeTogether is used to live share IDEs and coding sessions.
 
 type: application
-version: 1.4.7
+version: 1.4.8
 appVersion: "2022.2.1"
 kubeVersion: ">= 1.18.0"
 

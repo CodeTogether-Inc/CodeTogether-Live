@@ -231,7 +231,9 @@ affinity: {}
 proxy:
   enabled: false
   # Proxy URI format, omit credentials if unauthenticated:
-  # http|https|socks://myuser:mypassword@myproxyhost.com:port
+  # http://myuser:mypassword@myproxyhost.com:port
+  # Note: At this point only HTTP proxy is supported. Additionally, 
+  # if you are using special characters in the password, please verify escaping.
   uri: ""
   # Name of existing secret to use for proxy URI. If specified,
   # then proxy.uri will be ignored and picked up from this secret.
