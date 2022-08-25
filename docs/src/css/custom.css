@@ -1,0 +1,141 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+ 
+:root {
+  --ifm-color-primary: #1b5f8c;
+  --ifm-color-primary-dark: #18567e;
+  --ifm-color-primary-darker: #0e3046;
+  --ifm-color-primary-darkest: #0b2638;
+  --ifm-color-primary-light: #1e699a;
+  --ifm-color-primary-lighter: #1f6da1;
+  --ifm-color-primary-lightest: #237cb6;
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary: #2ea3f2;
+  --ifm-color-primary-dark: #1397f0;
+  --ifm-color-primary-darker: #0e8fe6;
+  --ifm-color-primary-darkest: #0d87d9;
+  --ifm-color-primary-light: #49aff4;
+  --ifm-color-primary-lighter: #57b5f5;
+  --ifm-color-primary-lightest: #7fc7f7;
+  --ifm-color-info-dark: #dbc600;
+  --ifm-color-info-contrast-background: #2d2d2d; 
+  --ifm-color-warning-contrast-background: #2d2d2d;
+  --ifm-color-secondary-contrast-background: #2d2d2d;
+  --ifm-color-success-contrast-background: #2d2d2d;
+  --ifm-alert-border-left-width: 7px;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*** Content Headers - START */
+
+/* Size */
+div.markdown > h1 {
+    font-size: 2.3rem;
+}
+div.markdown > h2 {
+    font-size: 1.9rem;
+}
+div.markdown > h3 {
+    font-size: 1.5rem;
+}
+div.markdown > h4,
+div.markdown > h5,
+div.markdown > h6 {
+    font-size: 1.1rem;
+}
+/*** Content Headers - END */
+
+.button-37 {
+  background-color: #dbc600;
+  border: 1px solid #cbc600;
+  min-width: 152px;
+  padding-left: 2px!important;
+  padding-right: 2px!important;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight:400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+  font-size: 103%;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: var(--docs-color-text);
+
+  --ifm-link-hover-decoration: none;
+  --ifm-link-hover-color: inherit;
+  cursor: pointer;
+
+  transition-property: background-color, color;
+
+  border: 1px solid var(--docs-color-border);
+  border-radius: 8px;
+}
+
+.image-card:hover {
+  background-color: var(--docs-color-background-100);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-content .title {
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.card-content .description {
+  font-size: 14px;
+  color: var(--docs-color-text-100);
+  line-height: 1.5;
+}
+
+.four-section-content {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.column-content {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 12px;
+  justify-items: center;
+}
