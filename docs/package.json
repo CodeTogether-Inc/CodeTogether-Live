@@ -21,7 +21,8 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "node": "^16.17.0"
+    "node": "^16.17.0",    
+    "@cmfcmf/docusaurus-search-local": "^0.11.0"
   },
   "browserslist": {
     "production": [
