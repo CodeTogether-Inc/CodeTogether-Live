@@ -139,3 +139,6 @@ div.markdown > h6 {
   gap: 12px;
   justify-items: center;
 }
+
+/* Space above images in lists */
+li img {margin-top: 12px;}

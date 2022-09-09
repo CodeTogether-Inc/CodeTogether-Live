@@ -18,14 +18,12 @@ Teams support is also available in the Cloud-SaaS version with a Teams plan. Ref
 
 Complete the following steps to create your team in CodeTogether.
 
-1. Double-click (or click in VS Code) Join/create new team from the Your Teams node in the CodeTogether view.
-
- ![Create Team](/img/teams/IJCreateTeam.png)
-2. Select Create a new team and get an invite code, and then enter a name for the team.
-3. Click OK. A confirmation appears with the team code.
-4. Click the Copy button to copy the team code to the clipboard.
- 
- ![Team Created](/img/teams/IJTeamCreated.png)
+1. Double-click (or click in VS Code) **Join/create new team** from the **Your Teams** node in the **CodeTogether** view.
+![Create Team](/img/teams/IJCreateTeam.png)
+2. Select **Create a new team** and get an invite code, and then enter a name for the team.
+3. Click **OK**. A confirmation appears with the team code.
+4. Click the **Copy** button to copy the team code to the clipboard.  
+![Team Created](/img/teams/IJTeamCreated.png)
 5. Share the team code with team members.
 
 
@@ -33,10 +31,10 @@ Complete the following steps to create your team in CodeTogether.
 
 Complete the following steps to join a team in CodeTogether.
 
-1. Double-click (or click in VS Code) Join/create new team from the Your Teams node in the CodeTogether view.
-2. Select Join an existing team and paste (Ctrl+V) the Team Code.
+1. Double-click (or click in VS Code) **Join/create new team** from the **Your Teams** node in the **CodeTogether** view.
+2. Select **Join an existing team** and paste the Team Code.  
 ![Join Team](/img/teams/VSCJoinTeam.png)
-3. Click OK. The new team is listed under the Your Teams node in the CodeTogether view.
+3. Click **OK**. The new team is listed under the Your Teams node in the CodeTogether view.
 
 ## Working with Teams
 

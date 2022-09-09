@@ -135,26 +135,15 @@ The following steps are for Okta, however, the process and properties are simila
 
 :::
 
-1. Click **Add Application** in Okta.
-
+1. Click **Add Application** in Okta.  
 ![Add an Okata application](/img/sso/1_add_application.png)
-
-2.  Click **Create New App**.
-
+2.  Click **Create New App**.  
 ![Create the Okata application](/img/sso/2_create_new_application.png)
-
-3. Give your application a suitable name, select **Web** as the platform and **OpenID Connect** as the sign on method.
-
+3. Give your application a suitable name, select **Web** as the platform and **OpenID Connect** as the sign on method.  
 ![Naming app](/img/sso/3_sign_on_method.png)
-
-4. Specify the Login and Logout redirect URIs as described in the configuration section and click **Save**. Your application is created.
-
+4. Specify the Login and Logout redirect URIs as described in the configuration section and click **Save**. Your application is created.  
 ![Configuring app](/img/sso/4_login_url.png)
-
-5. Copy the Client ID and Client Secret from the Client Credentials section.
-
+5. Copy the Client ID and Client Secret from the Client Credentials section.  
 ![Copying client credentials](/img/sso/5_client_details.png)
-
-6. Edit the General Settings and ensure you set the required Application grant types and Save these changes. Your SSO application is now ready for CodeTogether integration.
-
+6. Edit the General Settings and ensure you set the required Application grant types and Save these changes. Your SSO application is now ready for CodeTogether integration.  
 ![Setting allowed grant types](/img/sso/6_application_grant_types-1.png)
