@@ -135,19 +135,11 @@ The logs will then be accessible at <code>https://&lt;CT_SERVER_URL&gt;/logs</co
 </TabItem>
 </Tabs>
 
-## Metrics Monitoring with StatsD
+## Metrics Monitoring
 
-If you would like to monitor your server metrics using a monitoring platform like Prometheus or Graphite, CodeTogether 4.2 and later makes this possible with StatsD. Add the following variables to your Docker or Kubernetes configuration files, be sure to substitute the example values specified:
+CodeTogether publishes server metrics using StatsD and/or Prometheus, allowing integration with monitoring tools like Graphite, Grafana and others.
 
-```bash
-CT_PROMETHEUS_ENABLED "true"
-CT_METRICS_STATSD_HOST "statsdhosturl.yourcompany.com"
-CT_METRICS_STATSD_PORT "8125"
-CT_METRICS_STATSD_PROTOCOL "UDP"
-```
-
-The following metrics are currently exposed:
-
+The following metrics are currently published:
 - Number of unique users currently online
 - Number of active sessions
 - Number of active session connections
@@ -155,6 +147,19 @@ The following metrics are currently exposed:
 - Total sessions hosted
 - Total plugins/extensions downloaded
 
+In a multi-server deployment, metrics integration must be configured on the  [Dashboard](using-the-on-premises-dashboard.md#integration). In single server deployments, add the following variables to your Docker or Kubernetes configuration files, be sure to substitute the example values specified:
+
+### StatsD
+```bash
+CT_METRICS_STATSD_HOST "statsdhosturl.yourcompany.com"
+CT_METRICS_STATSD_PORT "8125"
+CT_METRICS_STATSD_PROTOCOL "UDP"
+```
+### Prometheus
+```bash
+CT_PROMETHEUS_ENABLED "true"
+```
+With Prometheus enabled, metrics are published at `https://<CT_SERVER_URL>/metrics`
 
 ## Health-Check
 
