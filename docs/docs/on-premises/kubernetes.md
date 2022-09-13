@@ -288,7 +288,7 @@ collectMetrics:
 
 ## Appendix B: codetogether.yaml
 
-```yaml
+```yaml showLineNumbers
 #========================================================================
 # Secret: CodeTogether License Values
 # ========================================================================
@@ -439,4 +439,4 @@ spec:
                 key: CT_SIGNATURE
       imagePullSecrets:
       - name: ctcreds
-```*
+```
