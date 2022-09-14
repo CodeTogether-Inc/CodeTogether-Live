@@ -26,21 +26,21 @@ Roll out CodeTogether internally and keep your source 100% behind your firewall.
  <Card
         title="Docker Container"
         description="Deploy via Docker, using the Genuitec Docker Registry or Red Hat Software Catalog"
-        to="on-premises-installation-guide/docker"
+        to="/on-premises-installation-guide/docker"
         iconl='/img/logos/docker-light.png'
         icond='/img/logos/docker-dark.png'
       />
  <Card
         title="Helm Chart"
         description="Deploy as a Kubernetes pod through a Helm chart"
-        to="on-premises-installation-guide/kubernetes"
+        to="/on-premises-installation-guide/kubernetes"
         iconl='/img/logos/helm-light.png'
         icond='/img/logos/helm-dark.png'
       />
  <Card
         title="Kubernetes"
         description="Deploy as a Kubernetes pod through a deployment file"
-        to="on-premises-installation-guide/kubernetes"
+        to="/on-premises-installation-guide/kubernetes#deploying-as-a-kubernetes-pod-through-a-deployment-file-deprecated"
         iconl='/img/logos/kubernetes-light.png'
         icond='/img/logos/kubernetes-dark.png'
       />
