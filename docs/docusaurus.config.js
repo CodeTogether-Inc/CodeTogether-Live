@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'CodeTogether Documentation',
   tagline: 'CodeTogether Documentation',
-  url: 'https://codetogether.com/',
+  url: 'https://www.codetogether.com/',
   
   baseUrl: '/docs/',
   onBrokenLinks: 'warn',
