@@ -122,6 +122,9 @@ If `ENV CT_AV_ENABLED` `"true"`:
    - If the server provided by `CT_SERVER_URL` is not DNS resolvable – for instance, like being in your home network – you must set `CT_AV_LAN_IP` to that private IP.
    - If you are mapping ports 10000/udp and 4443/tcp to an IP that’s different from the server specified by `CT_SERVER_URL`, you must set `CT_AV_LAN_IP` to that IP.
 
+:::info
+CodeTogether's audio, video and screen sharing capabilities use the WebRTC framework, requiring both TCP and UDP communication to function. If your firewall does not allow incoming UDP traffic, you may need to set up a TURN server on your intranet. Please read [this document](/on-premises/turn-server.md) for details.
+:::
 #### SSO Integration
 
 If you’d like to set up SSO integration, please see [this doc](../on-premises/sso.md) for configuration steps and additional environment variables that must be configured in the container.

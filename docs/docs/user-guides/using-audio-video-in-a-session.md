@@ -1,6 +1,6 @@
 ---
 slug: /using-audio-video-in-a-session
-sidebar_label: Audio & Video
+sidebar_label: Audio, Video & Screen Sharing
 sidebar_position: 5
 ---
 
@@ -13,10 +13,10 @@ Once in a CodeTogether session, to connect to the A/V bridge click the **Join au
 
 Your connection to the bridge is managed in a browser.
 
-:::note
+:::caution
 
-Audio, video and screen sharing capabilities require WebRTC to be enabled in your browser. If you have disabled WebRTC, you must enable it to use these capabilities.
-
+- Audio, video and screen sharing capabilities require WebRTC to be enabled in your browser. If you have disabled WebRTC, you must enable it to use these capabilities.
+- If using CodeTogether on-premises, and you find that chat works, but audio, video and screen sharing does not, you *may* need to set up a TURN server on your intranet. Please read [this document](/on-premises/turn-server.md) for details.
 :::
 
 ### Audio Only Guests
