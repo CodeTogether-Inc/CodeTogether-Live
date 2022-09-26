@@ -32,6 +32,8 @@ The same CodeTogether image is used for locators and edge servers – the contai
 
 :::
 
+## Installation via Docker
+
 ### 1. Download Docker
 
 If not already installed, install Docker on the destination system from [here](https://www.docker.com/products/docker-desktop).
