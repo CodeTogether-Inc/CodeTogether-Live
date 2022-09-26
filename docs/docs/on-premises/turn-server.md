@@ -4,14 +4,14 @@ sidebar_label: A/V with a TURN Server
 sidebar_position: 4.5
 ---
 
-# Configuring Audio / Video with a TURN Server
+# Configuring Audio/Video with a TURN Server
 
 ## When is a TURN Server Required?
 
 CodeTogether's audio, video and screen sharing capabilities use the WebRTC framework, requiring both TCP and UDP communication to function. However, some corporate firewalls do not allow incoming UDP traffic. For such scenarios, CodeTogether allows UDP traffic to be relayed through a [TURN](https://webrtc.org/getting-started/turn-server) server, allowing these capabilities to function seamlessly over TCP. 
 
 :::caution
-Please set up a TURN server on your intranet *only* if CodeTogether's Audio / Video support does not work out of the box for the above mentioned reason.
+Set up a TURN server on your intranet *only* if CodeTogether's Audio/Video support does not work out of the box for the above mentioned reason.
 :::
 
 ## Set Up the coturn TURN Server
@@ -33,7 +33,7 @@ Make sure the following incoming **TCP** ports are opened in your network and/or
 :::note
 - You will need an SSL certificate for this server.
 - Please see [turnserver.conf](https://github.com/coturn/coturn/blob/master/examples/etc/turnserver.conf) for a more advanced example, along with documentation on the different configuration options. 
-- You may need to change the network settings in the configuraton file, and in the subsequent `docker run` command based on your environment.
+- You may need to change the network settings in the configuration file and in the subsequent `docker run` command, based on your environment.
 :::
 
 ```bash
