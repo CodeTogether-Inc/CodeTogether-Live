@@ -18,6 +18,6 @@ Teams support in CodeTogether provides the following benefits:
 Teams support is available in both our Cloud-SaaS version with a Teams plan and our On-Premises version. For more information on Teams support, select the version of CodeTogether you use:
 
 <div className="column-content">
-  <Button text="CodeTogether Cloud-SaaS" to="codetogether-teams/saas"/>
-  <Button text="CodeTogether On-Premises" to="codetogether-teams/on-premises"/>
+  <Button text="CodeTogether Cloud-SaaS" to="/codetogether-teams/saas"/>
+  <Button text="CodeTogether On-Premises" to="/codetogether-teams/on-premises"/>
 </div>
