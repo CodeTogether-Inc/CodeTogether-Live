@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Single Sign-On (SSO)",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "doc",
+    "id": "sso"
+  } 
+}

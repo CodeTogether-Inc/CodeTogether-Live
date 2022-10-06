@@ -129,7 +129,7 @@ CodeTogether's audio, video and screen sharing capabilities use the WebRTC frame
 :::
 #### SSO Integration
 
-If you’d like to set up SSO integration, please see [this doc](../on-premises/sso.md) for configuration steps and additional environment variables that must be configured in the container.
+If you'd like to set up SSO integration, see [Single Sign-On (SSO) Support](/on-premises/sso/sso.md) for configuration steps and additional environment variables that must be configured in the container.
 
 #### StatsD/Prometheus Integration (CodeTogether 4.2+)
 

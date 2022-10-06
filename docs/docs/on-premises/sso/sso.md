@@ -53,7 +53,7 @@ In CodeTogether 4.1.2, `CT_SSO_SYSTEM_BASE_URL` replaces the `CT_SSO_AUTHORIZATI
 
 :::
 
-See [Appendix A: Configuring an Okta Application for CodeTogether Authorization](#appendix-a), for additional details. The configuration process will be similar in all SSO providers.
+We have guides for creating Apps in [Okta](okta.md) and [Azure](azure.md) for CodeTogether Authorization. The configuration process will be similar in all SSO providers.
 
 ### Example Identity Provider Configurations
 
@@ -124,26 +124,3 @@ After logging in, the CodeTogether view will show you as connected.
 > - `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`
 > - `https://dev-83772425.okta.com/oauth2/default/.well-known/openid-configuration`
 > - `https://login.microsoftonline.com/9e67eb9a-b109-4066-a505-bf770af1bdb0/v2.0/.well-known/openid-configuration`
-
-## Appendix A: Configuring an Okta Application for CodeTogether Authorization {#appendix-a} 
-
-This section walks you through the creation of an SSO application in Okta—where you specify CodeTogether URLs to configure the application, and pick up endpoint URLs and properties to plug back into your CodeTogether container configuration.
-
-:::note
-
-The following steps are for Okta, however, the process and properties are similar for other SSO providers.
-
-:::
-
-1. Click **Add Application** in Okta.  
-![Add an Okata application](/img/sso/1_add_application.png)
-2.  Click **Create New App**.  
-![Create the Okata application](/img/sso/2_create_new_application.png)
-3. Give your application a suitable name, select **Web** as the platform and **OpenID Connect** as the sign on method.  
-![Naming app](/img/sso/3_sign_on_method.png)
-4. Specify the Login and Logout redirect URIs as described in the configuration section and click **Save**. Your application is created.  
-![Configuring app](/img/sso/4_login_url.png)
-5. Copy the Client ID and Client Secret from the Client Credentials section.  
-![Copying client credentials](/img/sso/5_client_details.png)
-6. Edit the General Settings and ensure you set the required Application grant types and Save these changes. Your SSO application is now ready for CodeTogether integration.  
-![Setting allowed grant types](/img/sso/6_application_grant_types-1.png)

@@ -17,7 +17,7 @@ Roll out CodeTogether internally and keep your source 100% behind your firewall.
 1. Contact [Genuitec Customer Service](https://www.codetogether.com/pricing/on-premises-contact-us/) to obtain your license and registry credentials.
 
 2. Review documents relevant to your On-Premises plan and configuration:
-    - [Single Sign-On (SSO) Support](sso.md)—Configuration steps and environment variables that must be configured in the container if using single sign-on integration.
+    - [Single Sign-On (SSO) Support](/on-premises/sso/sso.md)—Configuration steps and environment variables that must be configured in the container if using single sign-on integration.
     - [Multi-Server On-Premises Deployment](multi-server-on-premises-deployment.md)—An overview of multi-server CodeTogether deployment if you selected this plan.
     - [CodeTogether Edge Server Technical Notes](edge-server-technical-notes.md)—Advanced configuration and troubleshooting steps, including how to configure load balancers and access log files.
 

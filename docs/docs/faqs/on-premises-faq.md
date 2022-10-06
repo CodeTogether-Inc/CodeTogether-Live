@@ -80,7 +80,7 @@ As of version 2022.1, CodeTogether does support multi-server deployments for loa
 <details>
   <summary>Is single sign-on (SSO) supported?</summary>
 
-CodeTogether 4.0 introduced [single sign-on (SSO) integration](../on-premises/sso.md) for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether works with providers like Okta, Azure AD, Microsoft AD FS, Auth0, Oracle and Keycloak.
+CodeTogether 4.0 introduced [single sign-on (SSO) integration](/on-premises/sso/sso.md) for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether works with providers like Okta, Azure AD, Microsoft AD FS, Auth0, Oracle and Keycloak.
 
 </details>
 

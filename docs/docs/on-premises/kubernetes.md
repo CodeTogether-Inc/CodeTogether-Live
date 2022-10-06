@@ -132,7 +132,7 @@ In the Secret section in the YAML file, update with the exact values for the Cod
 
 ### 5. Update codetogether.yaml with SSO Configuration (Optional)
 
-If you’d like to set up SSO integration, see [Single Sign-On (SSO) Support](sso.md) for configuration steps and additional variables that must be configured in the secret section of your YAML file.
+If you'd like to set up SSO integration, see [Single Sign-On (SSO) Support](/on-premises/sso/sso.md) for configuration steps and additional variables that must be configured in the secret section of your YAML file.
 
 ### 6. Update codetogether.yaml with SSL Configuration
 

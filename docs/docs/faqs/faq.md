@@ -93,7 +93,7 @@ Ensure these ports are accessible.
 <details>
   <summary> Is single sign-on (SSO) supported?</summary>
 
-CodeTogether 4.0 introduced [single sign-on (SSO)](../on-premises/sso.md) integration for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether works with providers like Okta, Azure AD, Microsoft AD FS and Auth0.
+CodeTogether 4.0 introduced [single sign-on (SSO)](/on-premises/sso/sso.md) integration for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether works with providers like Okta, Azure AD, Microsoft AD FS and Auth0.
 
 </details>
 
