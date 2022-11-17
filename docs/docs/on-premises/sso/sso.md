@@ -98,7 +98,7 @@ Click **Connect** to be taken to your provider’s login page, where you can aut
 
 A message displays when the authentication is complete.
 
-![Authenticaion success](/img/sso/browser_signed_in.png)
+![Authentication success](/img/sso/browser_signed_in.png)
 
 After logging in, the CodeTogether view will show you as connected. 
 
