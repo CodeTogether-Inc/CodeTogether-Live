@@ -49,13 +49,13 @@ When configuring your server, it is important for the SSL configuration that the
 Deploy the CodeTogether chart through Helm, using the untarred chart and your customized `values.yaml` file.
 
 ```bash
-# helm install codetogether -f my-env-values.yaml ./CodeTogether
+# helm install codetogether -f my-env-values.yaml ./codetogether
 ```
 
 To update an existing CodeTogether deployment, instead of running the `install` command, use the `upgrade` command.
 
 ```bash
-# helm upgrade codetogether -f my-env-values.yaml ./CodeTogether
+# helm upgrade codetogether -f my-env-values.yaml ./codetogether
 ```
 
 :::note
