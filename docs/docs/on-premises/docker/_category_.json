@@ -1,0 +1,11 @@
+{
+  "position": 4,
+  "label": "Install via Docker",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "doc",
+    "id": "on-premises/docker/docker"
+  } 
+}

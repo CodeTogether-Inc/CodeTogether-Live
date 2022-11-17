@@ -20,7 +20,7 @@ The instructions below cover both single and multi-server deployments with addit
 
 :::info Multi-Server Deployment Prerequisites
 
-As of CodeTogether 2022.1, you can optionally deploy multiple CodeTogether servers on-premises. Benefits of a multi-server deployment include service redundancy, scalability through distributed workloads, and lower latency with regional deployments—see [Multi-Server On-Premises Deployment](multi-server-on-premises-deployment.md) for additional details.
+As of CodeTogether 2022.1, you can optionally deploy multiple CodeTogether servers on-premises. Benefits of a multi-server deployment include service redundancy, scalability through distributed workloads, and lower latency with regional deployments—see [Multi-Server On-Premises Deployment](/on-premises/multi-server-on-premises-deployment.md) for additional details.
 
 A multi-server deployment comprises the following containers:
 
@@ -70,7 +70,7 @@ If you’d like to pull a specific version of CodeTogether, use the following co
 $ docker pull hub.edge.codetogether.com/releases/codetogether:<version>
 ```
 
-To get a list of versions available, please see our [CodeTogether Edge Server Technical Notes](../on-premises/edge-server-technical-notes.md).
+To get a list of versions available, please see our [CodeTogether Edge Server Technical Notes](/on-premises/edge-server-technical-notes.md).
 
 
 ### 4. Verify the Image is Available
@@ -133,7 +133,7 @@ If you'd like to set up SSO integration, see [Single Sign-On (SSO) Support](/on-
 
 #### StatsD/Prometheus Integration (CodeTogether 4.2+)
 
-If you’d like CodeTogether metrics to be exposed to an external monitoring platform, please see [this doc](../on-premises/edge-server-technical-notes.md) for additional environment variables that must be configured in the container.
+If you’d like CodeTogether metrics to be exposed to an external monitoring platform, please see [this doc](/on-premises/edge-server-technical-notes.md) for additional environment variables that must be configured in the container.
 
 License details will be given to you by your Genuitec Sales representative, and must be entered exactly as they are supplied with the identical punctuation and spacing. Be sure to use straight quotes around the `CT_LICENSEE` value.
 
@@ -238,7 +238,7 @@ FROM hub.edge.codetogether.com/releases/codetogether:<version>
 
 :::info
   - A dedicated Dockerfile for the locator server and each individual edge server is required – you will build and run each of these.
-  - Unlike single server deployments, StatsD/Prometheus integration should be configured in the [Dashboard](../on-premises/using-the-on-premises-dashboard.md), not in the Dockerfile.
+  - Unlike single server deployments, StatsD/Prometheus integration should be configured in the [Dashboard](/on-premises/using-the-on-premises-dashboard.md), not in the Dockerfile.
 :::
 
 #### Setting `CT_LOCATOR`:
@@ -255,7 +255,7 @@ ENV CT_REGION North
 
 #### Creating `locator-config.json`:
 
-See [Setting up a Database for multi-server Deployments](../on-premises/edge-server-technical-notes.md) to set up a database and create a locator-config.json file which you will use in the subsequent steps.
+See [Setting up a Database for multi-server Deployments](/on-premises/edge-server-technical-notes.md) to set up a database and create a locator-config.json file which you will use in the subsequent steps.
 
 
 ### 7. Build the Docker Container
@@ -377,7 +377,7 @@ $ docker logs -f codetogether
 
 #### Checking Status and Further Configuration in the On-premises Dashboard
 
-If you open your Dashboard `https://CT_LOCATOR/dashboard`, you will notice  a section displaying the health of each edge server.  If you set up multiple servers for a regional deployment, please go to the Regions page to set up the IP ranges that should map to each edge server. You can also use the Advanced page to configure metrics integration. See our [Dashboard documentation](../on-premises/using-the-on-premises-dashboard.md) for details.
+If you open your Dashboard `https://CT_LOCATOR/dashboard`, you will notice  a section displaying the health of each edge server.  If you set up multiple servers for a regional deployment, please go to the Regions page to set up the IP ranges that should map to each edge server. You can also use the Advanced page to configure metrics integration. See our [Dashboard documentation](/on-premises/using-the-on-premises-dashboard.md) for details.
 
 ### 10. Download Preconfigured Clients for CodeTogether
 :::caution
