@@ -3,5 +3,9 @@
   "label": "On-Premises",
   "collapsible": true,
   "collapsed": false,
-  "className": "red"
-  }
+  "className": "red",
+  "link": {
+    "type": "doc",
+    "id": "on-premises/on-premises-installation-guide"
+  } 
+}
