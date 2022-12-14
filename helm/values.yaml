@@ -121,8 +121,8 @@ locatorEdge:
   region: "default"
 
 #
-# Enables and configures Ingress (default = Nginx)
-# Replace the below 'codetogether.local' example with your server's FQDN
+# Enables and configures Ingress (default = Nginx). The className value can be used
+# to change the default behavior. Please read the comments below to see details.
 #
 ingress:
   enabled: true
@@ -238,3 +238,13 @@ proxy:
   # Name of existing secret to use for proxy URI. If specified,
   # then proxy.uri will be ignored and picked up from this secret.
   # existingSecret: ""
+
+#
+# Configures a periodic restart of the CodeTogether server in the running container.
+#
+# @since 2022.2.2-1381
+#
+restart:
+  enabled: true
+  # by default restart is scheduled on every Sunday 11 AM
+  cronPattern: "* 11 * * 0"
