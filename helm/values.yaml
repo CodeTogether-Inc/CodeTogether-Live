@@ -7,9 +7,6 @@
 # Use this file as a template to create your own 'codetogether-values.yaml' file.
 # For full detail on the chart's prerequisites, settings and configuration, please refer to our official Helm repository at:
 #   https://artifacthub.io/packages/helm/codetogether/codetogether
-
-replicaCount: 1
-
 nameOverride: ""
 fullnameOverride: ""
 
