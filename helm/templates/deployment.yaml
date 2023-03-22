@@ -225,7 +225,7 @@ spec:
             successThreshold: {{ .Values.livenessProbe.successThreshold }}
             failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
             httpGet:
-              path: /clients/
+              path: /ct-health/
               port: http
           
           readinessProbe:
@@ -235,7 +235,7 @@ spec:
             successThreshold: {{ .Values.readinessProbe.successThreshold }}
             failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
             httpGet:
-              path: /clients/
+              path: /ct-health/
               port: http
 
           resources:
