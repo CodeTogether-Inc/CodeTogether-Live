@@ -14,7 +14,7 @@ Roll out CodeTogether internally and keep your source 100% behind your firewall.
 
 ## Installing CodeTogether
 
-1. Contact [Genuitec Customer Service](https://www.codetogether.com/pricing/on-premises-contact-us/) to obtain your license and registry credentials.
+1. Contact [Customer Service](https://www.codetogether.com/live/on-premises-contact-us/) to obtain your license and registry credentials.
 
 2. Review documents relevant to your On-Premises plan and configuration:
     - [Single Sign-On (SSO) Support](/on-premises/sso/sso.md)—Configuration steps and environment variables that must be configured in the container if using single sign-on integration.
@@ -25,7 +25,7 @@ Roll out CodeTogether internally and keep your source 100% behind your firewall.
 <div className="four-section-content">
  <Card
         title="Docker Container"
-        description="Deploy via Docker, using the Genuitec Docker Registry or Red Hat Software Catalog"
+        description="Deploy via Docker, using the CodeTogether Docker Registry or Red Hat Software Catalog"
         to="/on-premises-installation-guide/docker"
         iconl='/img/logos/docker-light.png'
         icond='/img/logos/docker-dark.png'
@@ -66,6 +66,6 @@ Roll out CodeTogether internally and keep your source 100% behind your firewall.
 Due to security requirements, all communication in CodeTogether is required to be done via TLS, in addition to end-to-end encryption at the application layer. Besides strictly following secure coding practices, every CodeTogether build is scanned using vulnerability checking tools like Snyk and Trivy. Penetration tests are frequently run on our container, ensuring that it is not susceptible to vulnerabilities and attacks. We build on the Red Hat UBI minimal image and our security audited listing can be found in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55).
 
 ## Additional Resources
-If you have any questions, email [support@genuitec.com](mailto:support@genuitec.com) or contact your Genuitec Sales representative. You can also visit our [Gitter community](https://gitter.im/CodeTogether-com/community).
+If you have any questions, email [support@codetogether.com](mailto:support@codetogether.com) or contact your CodeTogether Sales representative. You can also visit our [Gitter community](https://gitter.im/CodeTogether-com/community).
 
 For answers to common questions, refer to the [On-Premises FAQ](../faqs/on-premises-faq.md).
