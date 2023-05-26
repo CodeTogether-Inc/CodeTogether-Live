@@ -96,7 +96,7 @@ All HTTP requests include a `ctstickiness` value. For IDE Clients, it is an HTTP
 
 ## Obtaining a List of Available CodeTogether Versions
 
-Get a list of CodeTogether images available for download at [here](https://hub.edge.codetogether.com/v2/releases/codetogether/tags/list). Authenticate with the Genuitec Docker registry credentials provided to you with your on-premises trial or purchase to access this list.
+Get a list of CodeTogether images available for download at [here](https://hub.edge.codetogether.com/v2/releases/codetogether/tags/list). Authenticate with the CodeTogether Docker registry credentials provided to you with your on-premises trial or purchase to access this list.
 
 ## Setting up Access to the CodeTogether Dashboard
 

@@ -14,7 +14,7 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Genuitec',
+  organizationName: 'CodeTogether',
   projectName: 'CodeTogether',
 
   presets: [
@@ -52,7 +52,7 @@ const config = {
         ],
       },
       footer: {       
-        copyright: `Copyright © ${new Date().getFullYear()} Genuitec, LLC. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CodeTogether Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

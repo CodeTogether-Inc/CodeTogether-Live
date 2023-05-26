@@ -25,7 +25,7 @@ On-Premises updates are in sync with updates to our public SaaS service, which a
 <details>
   <summary>Is CodeTogether compliant with the General Data Protection Regulation required by the EU?</summary>
 
-On-Premises usage of CodeTogether does not share nor capture any information that Genuitec has access to. In addition, the edge servers themselves as used in CodeTogether do not store information. Any extra requirements for internal software usage may still apply but is out of Genuitec’s scope.
+On-Premises usage of CodeTogether does not share nor capture any information that CodeTogether has access to. In addition, the edge servers themselves as used in CodeTogether do not store information. Any extra requirements for internal software usage may still apply but is out of CodeTogether's scope.
 
 </details>
 
@@ -64,7 +64,7 @@ The CodeTogether service does not require a very powerful system—it’s more o
 <details>
   <summary>How do I configure the On-Premises version?</summary>
 
-Pull down the Docker image from Genuitec’s Private Docker Registry or our security-audited listing in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55), and then run the CodeTogether On-Premises container with straight-up Docker or Kubernetes. For detailed instructions, see [CodeTogether On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md)
+Pull down the Docker image from CodeTogether's Private Docker Registry or our security-audited listing in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55), and then run the CodeTogether On-Premises container with straight-up Docker or Kubernetes. For detailed instructions, see [CodeTogether On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md)
 
 </details>
 
@@ -160,6 +160,6 @@ For technical questions, the easiest way to connect with us is via our [Gitter c
 
 For general information or sales questions, contact customer service at info@codetogether.com. You can also contact us via phone at +1.214.614.8328 or +1.888.914.6620.
 
-You can also reach out to us on [Twitter](https://twitter.com/Genuitec), [Facebook](https://www.facebook.com/Genuitec/) or [LinkedIn](https://www.linkedin.com/company/genuitec-llc).
+You can also reach out to us on [Twitter](https://twitter.com/codetogetherhq) or [LinkedIn](https://www.linkedin.com/company/codetogether-inc).
 
 </details>

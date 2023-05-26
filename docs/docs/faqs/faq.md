@@ -282,18 +282,11 @@ Yes, we do! [See if you qualify](https://www.codetogether.com/pricing/educationa
 👀 See [About Us](https://www.codetogether.com/about/) for more details
 
 <details>
-  <summary>Who makes CodeTogether?</summary>
-
-CodeTogether is made by Genuitec. Founded in 1997, and counting over 17,000 companies in 191 countries as customers, Genuitec creates tools that enable developers to build brilliant software. [Learn more](https://www.codetogether.com/about/) about us.
-
-</details>
-
-<details>
   <summary>Do you have any resources to help me get started with CodeTogether?</summary>
 
 Yes, check out our documentation. Start with the Install Guide for your IDE, and then read the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md) for a detailed look at how to get the most out of CodeTogether.
 
-Another great resource is our [Video Library](https://www.codetogether.com/#videos) which contains a number of videos that highlight key functionality and give a nice overview of CodeTogether in action.
+Another great resource is our [Video Library](https://www.codetogether.com/live/#videos) which contains a number of videos that highlight key functionality and give a nice overview of CodeTogether in action.
 
 </details>
 
@@ -306,6 +299,6 @@ To view existing issues or suggest a feature, visit our [GitHub Issue Tracker](h
 
 For general information or sales questions, contact customer service at info@codetogether.com. You can also contact us via phone at +1.214.614.8328 or +1.888.914.6620.
 
-You can also reach out to us on [Twitter](https://twitter.com/Genuitec), [Facebook](https://www.facebook.com/Genuitec/) or [LinkedIn](https://www.linkedin.com/company/genuitec-llc).
+You can also reach out to us on [Twitter](https://twitter.com/codetogetherhq) or [LinkedIn](https://www.linkedin.com/company/codetogether-inc).
 
 </details>

@@ -92,7 +92,7 @@ To use Kubernetes with CodeTogether, only a single container can be used per edg
 
 In the example below, the Ingress configuration and accompanying SSL certificate configuration may be skipped if this is being separately managed by your organization. As each organization’s usage of K8s may vary, no assumption has been made on the type of Ingress.
 
-The following instructions use the Genuitec Docker Registry. If you prefer to use the Red Hat Software Catalog instead, substitute credentials and container path as mentioned [here](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55?container-tabs=gti&gti-tabs=red-hat-login).
+The following instructions use the CodeTogether Docker Registry. If you prefer to use the Red Hat Software Catalog instead, substitute credentials and container path as mentioned [here](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55?container-tabs=gti&gti-tabs=red-hat-login).
 
 ### 1. Download the codetogether.yaml File
 
@@ -128,7 +128,7 @@ This step can be skipped if configuring Ingress separately.
 
 ### 4. Update codetogether.yaml with CodeTogether License
 
-In the Secret section in the YAML file, update with the exact values for the CodeTogether license as provided by your Genuitec Sales Representative.
+In the Secret section in the YAML file, update with the exact values for the CodeTogether license as provided by your CodeTogether Sales Representative.
 
 ### 5. Update codetogether.yaml with SSO Configuration (Optional)
 
@@ -210,7 +210,7 @@ openshift:
   enabled: false
 
 #
-# CodeTogether license (provided by your Genuitec Sales Representative)
+# CodeTogether license (provided by your CodeTogether Sales Representative)
 #
 license:
   licensee: "Example"
@@ -302,7 +302,7 @@ stringData:
   # Configure as needed for your deployment, should match your SSL certificate
   CT_SERVER_URL: "https://SERVERFQDN"
   CT_TRUST_ALL_CERTS: "true"
-  # Provided by your Genuitec Sales Representative
+  # Provided by your CodeTogether Sales Representative
   # *values must match exactly
   CT_LICENSEE: "Your Company"
   CT_MAXCONNECTIONS: "0"

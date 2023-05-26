@@ -38,11 +38,11 @@ The same CodeTogether image is used for locators and edge servers – the contai
 
 If not already installed, install Docker on the destination system from [here](https://www.docker.com/products/docker-desktop).
 
-### 2. Log In to Genuitec’s Docker Registry
+### 2. Log In to CodeTogether's Docker Registry
 
-The following instructions use the Genuitec Docker Registry. If you prefer to use the Red Hat Software Catalog instead, please substitute credentials and container path as mentioned [here](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55?container-tabs=gti&gti-tabs=red-hat-login).
+The following instructions use the CodeTogether Docker Registry. If you prefer to use the Red Hat Software Catalog instead, please substitute credentials and container path as mentioned [here](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55?container-tabs=gti&gti-tabs=red-hat-login).
 
-Using your credentials provided by the Genuitec Sales team, log in to the Genuitec Docker Registry which is where you will receive the Docker image. Replace &lt;username&gt; with your own login for the registry enclosed in double quotes.
+Using your credentials provided by the CodeTogether Sales team, log in to the CodeTogether Docker Registry which is where you will receive the Docker image. Replace &lt;username&gt; with your own login for the registry enclosed in double quotes.
 
 ```bash
 $ docker login -u "<username>" hub.edge.codetogether.com
@@ -135,7 +135,7 @@ If you'd like to set up SSO integration, see [Single Sign-On (SSO) Support](/on-
 
 If you’d like CodeTogether metrics to be exposed to an external monitoring platform, please see [this doc](/on-premises/edge-server-technical-notes.md) for additional environment variables that must be configured in the container.
 
-License details will be given to you by your Genuitec Sales representative, and must be entered exactly as they are supplied with the identical punctuation and spacing. Be sure to use straight quotes around the `CT_LICENSEE` value.
+License details will be given to you by your CodeTogether Sales representative, and must be entered exactly as they are supplied with the identical punctuation and spacing. Be sure to use straight quotes around the `CT_LICENSEE` value.
 
 :::caution
 If you are using a self-signed certificate, set `CT_TRUST_ALL_CERTS` to `true`, regardless of whether you’re using an external certificate, or one from inside the container.
@@ -243,7 +243,7 @@ FROM hub.edge.codetogether.com/releases/codetogether:<version>
 
 #### Setting `CT_LOCATOR`:
 
-When requesting a license for multi-server deployment, you must send Genuitec the externally accessible HTTPS URL for the CodeTogether Locator. Your license block will use this URL as the value for the `CT_LOCATOR` variable, and as part of license enforcement, this variable must be set for the locator server and each edge server. In the locator’s Dockerfile, `CT_LOCATOR` should have the same value as `CT_SERVER_URL`, and not none as you can see in the sample above.
+When requesting a license for multi-server deployment, you must send CodeTogether the externally accessible HTTPS URL for the CodeTogether Locator. Your license block will use this URL as the value for the `CT_LOCATOR` variable, and as part of license enforcement, this variable must be set for the locator server and each edge server. In the locator’s Dockerfile, `CT_LOCATOR` should have the same value as `CT_SERVER_URL`, and not none as you can see in the sample above.
 
 #### Setting `CT_REGION`:
 
