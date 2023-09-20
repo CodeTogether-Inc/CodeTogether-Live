@@ -52,7 +52,6 @@ Free plans, including  anonymous usage, are always available.
 - [Delivery log](https://www.codetogether.com/eHts/deliverylog/)  
 - [Security overview](https://www.codetogether.com/eHts/download/security/)  
 - [Plans & pricing](https://www.codetogether.com/eHts/pricing)  
-
 ## Contact Us
 <a href="https://twitter.com/genuitec"><img src="https://img.shields.io/twitter/follow/Genuitec?style=social"></a>
 <a href="https://gitter.im/CodeTogether-com/community"><img src="https://img.shields.io/gitter/room/CodeTogether-com/community"></a>
