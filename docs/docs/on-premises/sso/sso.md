@@ -6,7 +6,7 @@ sidebar_position: 6
 
 # Single Sign-On (SSO) Support
 
-SSO integration was introduced in CodeTogether 4.0 and is currently available only for [On-Premises](https://www.codetogether.com/on-premises/) installations.
+SSO integration was introduced in CodeTogether Live 4.0 and is currently available only for [On-Premises](https://www.codetogether.com/live/on-premises/) installations.
 
 ## Scope of SSO Integration
 

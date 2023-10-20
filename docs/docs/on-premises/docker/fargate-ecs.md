@@ -139,9 +139,9 @@ Get the public IP for your container from **Clusters > codetogether > Task (tab)
 
 ### Accessing the Container
 
-If you are evaluating Codetogether locally (private URL), make sure you are using an `/etc/hosts` mapping, which maps your container's public IP to the CT_SERVER_URL value you specified.
+If you are evaluating Codetogether Live locally (private URL), make sure you are using an `/etc/hosts` mapping, which maps your container's public IP to the CT_SERVER_URL value you specified.
 
-If you are evaluating Codetogether with a public URL, add a DNS record that maps your container's public IP to the CT_SERVER_URL value you specified. Then, if you are not using a front-end Web server, you can reach your CodeTogether Dashboard at `https://<CT_SERVER_URL>:1443/dashboard`
+If you are evaluating Codetogether Live with a public URL, add a DNS record that maps your container's public IP to the CT_SERVER_URL value you specified. Then, if you are not using a front-end Web server, you can reach your CodeTogether Dashboard at `https://<CT_SERVER_URL>:1443/dashboard`
 
 ## Check Container Log
 

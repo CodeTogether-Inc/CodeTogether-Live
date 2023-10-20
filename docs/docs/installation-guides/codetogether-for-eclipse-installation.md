@@ -4,9 +4,9 @@ sidebar_label: Eclipse Plugin
 sidebar_position: 1
 ---
 
-# CodeTogether for Eclipse Installation Guide
+# Installing CodeTogether Live in Eclipse
 
-If you want to host a CodeTogether session from Eclipse, you’ll need to install the CodeTogether plugin for Eclipse. You can also join a CodeTogether session directly from Eclipse with the plugin installed.
+If you want to host a CodeTogether Live session from Eclipse, you’ll need to install the CodeTogether Live plugin for Eclipse. You can also join a session directly from Eclipse with the plugin installed.
 
 :::note 
 
@@ -14,13 +14,13 @@ The Eclipse plugin is not required to join sessions hosted from Eclipse. Partici
 
 :::
 
-## Installing the CodeTogether Plugin
-CodeTogether requires Eclipse Neon (4.6) or higher to host a session, or Eclipse Photon (4.8) or higher to join a session from Eclipse. If you have the [Marketplace Client](https://www.eclipse.org/mpc/) installed, it’s simple to add CodeTogether to Eclipse. With Eclipse running, drag the **Install** button from our Eclipse Marketplace listing onto the workbench to initiate the installation. Alternatively, you can install the plugin using the button on the [CodeTogether download page](https://www.codetogether.com/download/).
+## Installing the CodeTogether Live Plugin
+CodeTogether Live requires Eclipse Neon (4.6) or higher to host a session, or Eclipse Photon (4.8) or higher to join a session from Eclipse. If you have the [Marketplace Client](https://www.eclipse.org/mpc/) installed, it’s simple to add CodeTogether Live to Eclipse. With Eclipse running, drag the **Install** button from our Eclipse Marketplace listing onto the workbench to initiate the installation. Alternatively, you can install the plugin using the button on the [CodeTogether Live download page](https://www.codetogether.com/live/download/).
 
 If you prefer using an Eclipse update site directly, use this URL: `https://www.codetogether.com/updates/ci/`
 
 ## Getting Started
-After adding the CodeTogether plugin to your Eclipse IDE, it’s simple to host or join a pair programming session. For more information, see the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md).
+After adding the CodeTogether Live plugin to your Eclipse IDE, it’s simple to host or join a pair programming session. For more information, see the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md).
 
 :::note 
 

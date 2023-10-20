@@ -12,7 +12,7 @@ With a [CodeTogether Teams](https://www.codetogether.com/teams/) plan, you can r
 
 ## Running Tests
 
-As a guest connected to a CodeTogether session, there are several ways in which you can run tests:
+As a guest connected to a CodeTogether Live session, there are several ways in which you can run tests:
 
 - From the editor’s ruler area  
     ![Test run from editor](/img/running-tests-and-launches/run_from_ruler.png)
@@ -50,7 +50,7 @@ With a VS Code host, when tests are running, additional test runs cannot be init
 
 ## Test Discovery
 
-Just like the host IDE, CodeTogether does not scan the entire workspace for tests. Tests are discovered by CodeTogether clients using a number of different techniques, but fundamentally, tests are exposed to clients when the host IDE discovers them as well.
+Just like the host IDE, CodeTogether Live does not scan the entire workspace for tests. Tests are discovered by CodeTogether Live clients using a number of different techniques, but fundamentally, tests are exposed to clients when the host IDE discovers them as well.
 
 For example, if you are editing a file containing tests, they are immediately discovered by the host IDE and be actionable in the client.
 
@@ -69,7 +69,7 @@ In Eclipse and IntelliJ clients, you can create and run test specific launch con
 
 :::note
 
-When you run a test from a client connected to an IntelliJ or Eclipse host, as these IDEs are configuration based, CodeTogether attempts to find an existing configuration on the host that matches the test. If a match is found, the existing configuration is run, a new configuration is created if a match cannot be found at the host end.
+When you run a test from a client connected to an IntelliJ or Eclipse host, as these IDEs are configuration based, CodeTogether Live attempts to find an existing configuration on the host that matches the test. If a match is found, the existing configuration is run, a new configuration is created if a match cannot be found at the host end.
 
 :::
 
@@ -105,7 +105,7 @@ If your test run has multiple execution failures, you can easily navigate from o
 
 ## Limitations
 
-The test support in CodeTogether has been designed to work with the following test frameworks:
+The test support in CodeTogether Live has been designed to work with the following test frameworks:
 
 - Eclipse—JUnit, TestNG
 - IntelliJ—JUnit, TestNG, PHPUnit, Pytest
@@ -117,7 +117,7 @@ VS Code support is for version 1.59 or higher only when used as a host or client
 
 :::
 
-In IntelliJ and VS Code hosts, test frameworks beyond those listed above may still be accessible to clients in a CodeTogether session, however, these have not been extensively tested and there may be a few bugs or inconsistencies in test execution and result analysis. We will continue to add and improve support for additional frameworks in upcoming releases.
+In IntelliJ and VS Code hosts, test frameworks beyond those listed above may still be accessible to clients in a CodeTogether Live session, however, these have not been extensively tested and there may be a few bugs or inconsistencies in test execution and result analysis. We will continue to add and improve support for additional frameworks in upcoming releases.
 
 ## Running Launches
 

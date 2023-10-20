@@ -8,11 +8,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 
-# CodeTogether On-Premises Installation via Docker
+# CodeTogether Live On-Premises Installation via Docker
 
 ## Before You Begin 
 
-- CodeTogether requires secure HTTPS connections. Docker allows for two options regarding SSL – decide between running with SSL serviced directly from inside the container, or using Nginx or Apache outside of the container.
+- CodeTogether Live requires secure HTTPS connections. Docker allows for two options regarding SSL – decide between running with SSL serviced directly from inside the container, or using Nginx or Apache outside of the container.
 - You will need SSL certificates for each domain on which the CodeTogether services will be exposed.
 - If requesting a license for multi-server deployment, please mention the externally accessible HTTPS URL for the CodeTogether Locator (details below).
 
@@ -20,12 +20,12 @@ The instructions below cover both single and multi-server deployments with addit
 
 :::info Multi-Server Deployment Prerequisites
 
-As of CodeTogether 2022.1, you can optionally deploy multiple CodeTogether servers on-premises. Benefits of a multi-server deployment include service redundancy, scalability through distributed workloads, and lower latency with regional deployments—see [Multi-Server On-Premises Deployment](/on-premises/multi-server-on-premises-deployment.md) for additional details.
+As of CodeTogether Live 2022.1, you can optionally deploy multiple CodeTogether servers on-premises. Benefits of a multi-server deployment include service redundancy, scalability through distributed workloads, and lower latency with regional deployments—see [Multi-Server On-Premises Deployment](/on-premises/multi-server-on-premises-deployment.md) for additional details.
 
 A multi-server deployment comprises the following containers:
 
  - **Locator** – A single instance that manages load balancing or regional assignments to edge servers.
- - **Edge Servers** – One or more, based on your needs. These are the servers which manage CodeTogether sessions.
+ - **Edge Servers** – One or more, based on your needs. These are the servers which manage CodeTogether Live sessions.
  - **Database** – Co-located with the Locator to persist metrics, audit logs, etc. Can be MySQL or PostgreSQL.
 
 The same CodeTogether image is used for locators and edge servers – the container will function as a locator or an edge server based on configuration parameters.
@@ -85,7 +85,7 @@ hub.edge.codetogether.com/latest/codetogether  latest (snip)    2 minutes ago
 
 ### 5. Set up SSL Settings
 
-As mentioned in the introduction, using CodeTogether requires secure HTTPS connections. This can be done either by configuring a reverse proxy outside of the container, or enabling SSL inside the container itself. Skip this step if you will be using an SSL reverse proxy configured on your Docker host. Instead, enable SSL on the reverse proxy server of your choice ensuring that it is configured to support WebSockets.
+As mentioned in the introduction, using CodeTogether Live requires secure HTTPS connections. This can be done either by configuring a reverse proxy outside of the container, or enabling SSL inside the container itself. Skip this step if you will be using an SSL reverse proxy configured on your Docker host. Instead, enable SSL on the reverse proxy server of your choice ensuring that it is configured to support WebSockets.
 
 To enable SSL, first create a codetogether-ssl-settings.conf file containing the names of the certificate files you will be using. In addition, place the `yourcert.com.crt` and `yourcert.com.key` files next to this configuration file.
 
@@ -108,7 +108,7 @@ When configuring your server, it is important for the SSL configuration that the
 
 ### 6. Create the Dockerfile with License Details and Additional Configuration
 
-Create the Dockerfile file that will be used for this CodeTogether On-Premises deployment. Note that the `CT_SERVER_URL` must contain the HTTPS version of this service as CodeTogether will not run over HTTP.
+Create the Dockerfile file that will be used for this CodeTogether Live On-Premises deployment. Note that the `CT_SERVER_URL` must contain the HTTPS version of this service as CodeTogether Live will not run over HTTP.
 
 #### Audio/Video Configuration (CodeTogether 5.0+):
 
@@ -133,7 +133,7 @@ If you'd like to set up SSO integration, see [Single Sign-On (SSO) Support](/on-
 
 #### StatsD/Prometheus Integration (CodeTogether 4.2+)
 
-If you’d like CodeTogether metrics to be exposed to an external monitoring platform, please see [this doc](/on-premises/edge-server-technical-notes.md) for additional environment variables that must be configured in the container.
+If you’d like CodeTogether Live metrics to be exposed to an external monitoring platform, please see [this doc](/on-premises/edge-server-technical-notes.md) for additional environment variables that must be configured in the container.
 
 License details will be given to you by your CodeTogether Sales representative, and must be entered exactly as they are supplied with the identical punctuation and spacing. Be sure to use straight quotes around the `CT_LICENSEE` value.
 
@@ -227,7 +227,7 @@ ENV CT_AV_LAN_IP "auto"
 
 
 :::note
-If you’re working with a specific version of CodeTogether, use the following FROM instruction instead:
+If you’re working with a specific version of CodeTogether Live, use the following FROM instruction instead:
 
 ```bash
 FROM hub.edge.codetogether.com/releases/codetogether:<version>

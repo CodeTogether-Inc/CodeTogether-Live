@@ -4,9 +4,9 @@ sidebar_label: IntelliJ Plugin
 sidebar_position: 2
 ---
 
-# CodeTogether for JetBrains IntelliJ IDEs Installation Guide
+# Installing CodeTogether Live in JetBrains IntelliJ IDEs
 
-If you want to host a CodeTogether session from an IntelliJ-based IDE, you’ll need to install the CodeTogether plugin for IntelliJ. You can also join a CodeTogether session directly from IntelliJ-based IDEs with the plugin installed.
+If you want to host a CodeTogether Live session from an IntelliJ-based IDE, you’ll need to install the CodeTogether Live plugin for IntelliJ. You can also join a session directly from IntelliJ-based IDEs with the plugin installed.
 
 :::note 
 
@@ -14,19 +14,19 @@ The IntelliJ plugin is not required to join sessions hosted from IntelliJ. Parti
 
 :::
 
-## Installing the CodeTogether Plugin​
+## Installing the CodeTogether Live Plugin​
 
-To host a CodeTogether session from an IntelliJ-based IDE, 2019.1 or higher is required. To join a CodeTogether session from an IntelliJ-based IDE, 2019.2 or higher is required.
+To host a CodeTogether Live session from an IntelliJ-based IDE, 2019.1 or higher is required. To join a CodeTogether Live session from an IntelliJ-based IDE, 2019.2 or higher is required.
 
-You have two options when installing the CodeTogether plugin:
+You have two options when installing the CodeTogether Live plugin:
 
-- Install CodeTogether directly from your IntelliJ-based IDE via the [JetBrains Plugins Repository](https://www.jetbrains.com/help/idea/managing-plugins.html).
+- Install CodeTogether Live directly from your IntelliJ-based IDE via the [JetBrains Plugins Repository](https://www.jetbrains.com/help/idea/managing-plugins.html).
 
-- Download the ZIP file from the [CodeTogether download page](https://www.codetogether.com/download/) and add the file in your IDE.
+- Download the ZIP file from the [CodeTogether Live download page](https://www.codetogether.com/live/download/) and add the file in your IDE.
 
 ### Installing the ZIP File in IntelliJ
 
-If you choose to download the ZIP file, complete these steps to add the CodeTogether plugin to your IntelliJ-based IDE.
+If you choose to download the ZIP file, complete these steps to add the CodeTogether Live plugin to your IntelliJ-based IDE.
 
 1. In the IDE, go to **Settings/Preferences** (`Ctrl+Alt+S`) and select **Plugins**.
 
@@ -39,7 +39,7 @@ If you choose to download the ZIP file, complete these steps to add the CodeToge
 
 ## Getting Started
 
-After adding the CodeTogether plugin to your IntelliJ IDE, it’s simple to host or join a pair programming session. For more information, see the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md).
+After adding the CodeTogether Live plugin to your IntelliJ IDE, it’s simple to host or join a pair programming session. For more information, see the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md).
 
 :::note 
 

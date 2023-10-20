@@ -5,9 +5,9 @@ sidebar_position: 3
 
 ---
 
-# CodeTogether for VS Code Installation Guide
+# Installing CodeTogether Live in VS Code
 
-If you want to host a CodeTogether session from VS Code, you’ll need to install the CodeTogether extension for VS Code. You can also join a CodeTogether session directly from VS Code with the extension installed.
+If you want to host a CodeTogether Live session from VS Code, you’ll need to install the CodeTogether Live extension for VS Code. You can also join a session directly from VS Code with the extension installed.
 
 :::note
 
@@ -15,12 +15,12 @@ The VS Code extension is not required to join sessions hosted from VS Code. Part
 
 :::
 
-## Installing the CodeTogether Extension​
+## Installing the CodeTogether Live Extension​
 
-CodeTogether requires VS Code 1.44 or higher. You have two options when installing the CodeTogether extension:
+CodeTogether Live requires VS Code 1.44 or higher. You have two options when installing the CodeTogether Live extension:
 
 - Install via the [VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=genuitecllc.codetogether) listing.
-- Download the VSIX file from the [CodeTogether download page](https://www.codetogether.com/download/) and add the file in VS Code.
+- Download the VSIX file from the [CodeTogether Live download page](https://www.codetogether.com/live/download/) and add the file in VS Code.
 
 :::note
 
@@ -30,7 +30,7 @@ If using a proxy network, see [VS Code Proxy Troubleshooting](vscode-network-tro
 
 ### Installing the VSIX file in VS Code
 
-If you choose to download the VSIX file, complete these steps to add the CodeTogether extension to Visual Studio Code.
+If you choose to download the VSIX file, complete these steps to add the CodeTogether Live extension to Visual Studio Code.
 
 1. In VS Code, select **View > Extensions**.
 
@@ -42,13 +42,13 @@ If you choose to download the VSIX file, complete these steps to add the CodeTog
 
 ### Trusted Workspaces
 
-VS Code recently introduced the concept of Workspace Trust. While CodeTogether functions fine even if the workspace is not trusted, it may be annoying to repeatedly see the “untrusted workspace” message when joining sessions using a VS Code client. CodeTogether will suggest adding the `~/.codetogether/vscode` folder to the Trusted Folders and Workspaces list.
+VS Code recently introduced the concept of Workspace Trust. While CodeTogether Live functions fine even if the workspace is not trusted, it may be annoying to repeatedly see the “untrusted workspace” message when joining sessions using a VS Code client. CodeTogether Live will suggest adding the `~/.codetogether/vscode` folder to the Trusted Folders and Workspaces list.
 
 ![Trusting the workspace](/img/codetogether-for-vs-code-installation/VSCopenTrustSettings.png)
 
 ## Getting Started
 
-After adding the CodeTogether extension to your VS Code, it’s simple to host or join a pair programming session. For more information, see the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md).
+After adding the CodeTogether Live extension to your VS Code, it’s simple to host or join a pair programming session. For more information, see the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md).
 
 :::note 
 

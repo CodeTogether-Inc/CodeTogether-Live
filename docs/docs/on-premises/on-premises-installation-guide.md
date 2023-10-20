@@ -8,7 +8,7 @@ import Card from '@site/src/components/Card';
 import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# CodeTogether On-Premises Installation Guide
+# CodeTogether Live On-Premises Installation Guide
 
 Roll out CodeTogether internally and keep your source 100% behind your firewall. To use CodeTogether On-Premises, pull down and configure the [CodeTogether On-Premises](https://www.codetogether.com/on-premises/) container. The container provides a full set of collaboration services, including tailored client plugins for the host IDEs.
 
@@ -63,7 +63,7 @@ Roll out CodeTogether internally and keep your source 100% behind your firewall.
     :::
 
 ## Security
-Due to security requirements, all communication in CodeTogether is required to be done via TLS, in addition to end-to-end encryption at the application layer. Besides strictly following secure coding practices, every CodeTogether build is scanned using vulnerability checking tools like Snyk and Trivy. Penetration tests are frequently run on our container, ensuring that it is not susceptible to vulnerabilities and attacks. We build on the Red Hat UBI minimal image and our security audited listing can be found in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55).
+Due to security requirements, all communication in CodeTogether is required to be done via TLS, in addition to end-to-end encryption at the application layer. Besides strictly following secure coding practices, every CodeTogether Live build scanned using vulnerability checking tools like Snyk and Trivy. Penetration tests are frequently run on our container, ensuring that it is not susceptible to vulnerabilities and attacks. We build on the Red Hat UBI minimal image and our security audited listing can be found in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55).
 
 ## Additional Resources
 If you have any questions, email [support@codetogether.com](mailto:support@codetogether.com) or contact your CodeTogether Sales representative. You can also visit our [Gitter community](https://gitter.im/CodeTogether-com/community).

@@ -4,9 +4,9 @@ sidebar_label: Install via Kubernetes
 sidebar_position: 3
 ---
 
-# CodeTogether On-Premises Installation via Kubernetes
+# CodeTogether Live On-Premises Installation via Kubernetes
 
-Helm charts greatly simplify the installation of CodeTogether on Kubernetes. Our chart incorporates Kubernetes best practices and is the recommended way of installing CodeTogether going forward. If you do not use Helm, you may skip to the [next section](#deploying-as-a-kubernetes-pod-through-a-deployment-file-deprecated), though please note that this method of installation is deprecated, and the documentation is not being maintained.
+Helm charts greatly simplify the installation of CodeTogether Live on Kubernetes. Our chart incorporates Kubernetes best practices and is the recommended way of installing CodeTogether Live going forward. If you do not use Helm, you may skip to the [next section](#deploying-as-a-kubernetes-pod-through-a-deployment-file-deprecated), though please note that this method of installation is deprecated, and the documentation is not being maintained.
 
 ## Deploying as a Kubernetes Pod Through a Helm Chart
 

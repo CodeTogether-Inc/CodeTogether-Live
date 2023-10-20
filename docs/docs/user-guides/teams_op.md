@@ -4,19 +4,19 @@ sidebar_label: Teams for On-Premises
 sidebar_position: 6.2
 ---
 
-# Teams in CodeTogether On-Premises
+# Teams in CodeTogether Live On-Premises
 
 import TeamsCommon from './_teams_common.md'
 
-Built-in support for teams in CodeTogether On-Premises makes it even easier to collaborate with others. This guide details how to create teams, join teams, and highlights the differences when working with teams in CodeTogether On-Premises.
+Built-in support for teams in CodeTogether Live On-Premises makes it even easier to collaborate with others. This guide details how to create teams, join teams, and highlights the differences when working with teams in CodeTogether Live On-Premises.
 
 :::info SaaS
-Teams support is also available in the Cloud-SaaS version with a Teams plan. Refer to [Using CodeTogether Teams in the Cloud-SaaS](teams_saas.md) version for more information.
+Teams support is also available in the Cloud-SaaS version with a Teams plan. Refer to [Teams in CodeTogether Live SaaS](teams_saas.md) version for more information.
 :::
 
 ## Creating a Team
 
-Complete the following steps to create your team in CodeTogether.
+Complete the following steps to create a team in CodeTogether Live.
 
 1. Double-click (or click in VS Code) **Join/create new team** from the **Your Teams** node in the **CodeTogether** view.
 ![Create Team](/img/teams/IJCreateTeam.png)
@@ -29,7 +29,7 @@ Complete the following steps to create your team in CodeTogether.
 
 ## Joining a Team
 
-Complete the following steps to join a team in CodeTogether.
+Complete the following steps to join a team in CodeTogether Live.
 
 1. Double-click (or click in VS Code) **Join/create new team** from the **Your Teams** node in the **CodeTogether** view.
 2. Select **Join an existing team** and paste the Team Code.  
@@ -38,7 +38,7 @@ Complete the following steps to join a team in CodeTogether.
 
 ## Working with Teams
 
-The following information is specific to hosting and joining sessions in a team environment with CodeTogether On-Premises. Refer to the Getting Started Guide for additional information.
+The following information is specific to hosting and joining sessions in a team environment with CodeTogether Live On-Premises. Refer to the Getting Started Guide for additional information.
 
 ### Starting a Session
 

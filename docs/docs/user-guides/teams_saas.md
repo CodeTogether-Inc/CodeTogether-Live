@@ -4,14 +4,14 @@ sidebar_label: Teams for SaaS
 sidebar_position: 6.1
 ---
 
-# Teams in CodeTogether SaaS
+# Teams in CodeTogether Live SaaS
 
 import TeamsCommon from './_teams_common.md'
 
-CodeTogether Teams makes it even easier to collaborate in a team environment. This guide details how to set up and manage a team, and highlights the differences when working with CodeTogether Teams in the Cloud-SaaS version.
+CodeTogether Live Teams makes it even easier to collaborate in a team environment. This guide details how to set up and manage a team, and highlights the differences when working with CodeTogether Live Teams in the Cloud-SaaS version.
 
 :::info On-Premises
-Teams support is also included in the On-Premises version. Refer to [Using CodeTogether Teams in the On-Premises Version](teams_op.md) for more information.
+Teams support is also included in the On-Premises version. Refer to [Teams in CodeTogether Live On-Premises](teams_op.md) for more information.
 :::
 
 ## Creating a Team
@@ -31,7 +31,7 @@ If you already have an account on codetogether.com, you can log in with that acc
 You can also click the **Copy** button to copy an invite URL to the clipboard that you can share with others.
 :::
 
-4. After inviting members to the team, you have the option to download CodeTogether for your IDE if you haven’t already done so.
+4. After inviting members to the team, you have the option to download CodeTogether Live for your IDE if you haven’t already done so.
 
 ## Managing a Team
 

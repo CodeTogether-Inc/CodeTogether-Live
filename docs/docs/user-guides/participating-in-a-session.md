@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Participating in a Session
 
-CodeTogether lets you [join a session](getting-started-with-codetogether.md#joining-a-session) from a browser or an IDE (Eclipse, IntelliJ and VS Code). Your experience varies slightly depending on how you join the session.
+CodeTogether Live lets you [join a session](getting-started-with-codetogether.md#joining-a-session) from a browser or an IDE (Eclipse, IntelliJ and VS Code). Your experience varies slightly depending on how you join the session.
 
 #### When joining from an IDE:
 
@@ -61,7 +61,7 @@ The **Outline** view (**View > Outline**) displays a structural outline of the f
 ![Go to Symbol](/img/participating-in-a-session/goto_symbol.gif)
 
 ### Open Symbol
-Use your IDE’s Open Symbol/Open Type actions or shortcuts to bring up the corresponding Open Symbol dialog. CodeTogether is now capable of allowing you to find remote types across the entire shared workspace. If you are using a browser, use the **Open Workspace Symbol** command, or bring up the command palette and type in a `#` to start the symbol search. Depending on the host IDE, Open Symbol could allow you to filter beyond top level types; for example, into fields and methods.
+Use your IDE’s Open Symbol/Open Type actions or shortcuts to bring up the corresponding Open Symbol dialog. CodeTogether Live allows you to find remote types across the entire shared workspace. If you are using a browser, use the **Open Workspace Symbol** command, or bring up the command palette and type in a `#` to start the symbol search. Depending on the host IDE, Open Symbol could allow you to filter beyond top level types; for example, into fields and methods.
 
 ![Open Symbol](/img/participating-in-a-session/open_symbol.gif)
 
@@ -108,13 +108,13 @@ Errors from the host workspace appear in all participant sessions. This includes
 ![Validation](/img/participating-in-a-session/validation.png)
 
 ### Java Class Creation
-Create a new file with a java extension within a Java source folder, and CodeTogether creates a minimally scaffolded Java class, ready for further code.
+Create a new file with a java extension within a Java source folder, and CodeTogether Live creates a minimally scaffolded Java class, ready for further code.
 
 ### Formatting
 You can format the entire file by using the **Format Document** context menu action. If code is selected, only the selected code is formatted.
 
 ## Advanced Features
-CodeTogether includes a number of features that help you get the most of your collaborative coding session.
+CodeTogether Live includes a number of features that help you get the most of your collaborative coding session.
 
 ### Shared Console
 Console output on the host is visible to all participants, beginning with version 3.1. To see the output as soon as it is emitted on the host, access the appropriate view: the Console view in Eclipse, the Run view in IntelliJ or the Output view in VS Code or a browser.
@@ -134,9 +134,9 @@ Terminals opened on the host are automatically shared in the session, and are ac
 ![Shared Terminal](/img/participating-in-a-session/ctTerminal.png)
 
 ### Shared Server {#servers}
-If on a [Teams](https://www.codetogether.com/teams/) or [On-Premises](https://www.codetogether.com/on-premises/) plan, CodeTogether automatically detect servers running on the host system and displays them under the Shared Servers node in the CodeTogether view. This includes servers that are running independently, external to the IDE. You can also add a server manually by using the **Add Server** action on the Shared Servers node. The host can choose to start and stop sharing servers anytime during a session. If a previously shared server is stopped, it is removed  from the participants CodeTogether view, and become inaccessible.
+If on a [Teams](https://www.codetogether.com/teams/) or [On-Premises](https://www.codetogether.com/live/on-premises/) plan, CodeTogether Live automatically detect servers running on the host system and displays them under the Shared Servers node in the CodeTogether view. This includes servers that are running independently, external to the IDE. You can also add a server manually by using the **Add Server** action on the Shared Servers node. The host can choose to start and stop sharing servers anytime during a session. If a previously shared server is stopped, it is removed  from the participants CodeTogether view, and become inaccessible.
 
-On the guest side, servers shared by the host appear under the Shared Servers node. Double-click (or click in VS Code) the server or use the **Connect Server** action to connect to the server. CodeTogether attempts to make the server available at the same port at which it is running on the host, but chooses the next available port if that port is not available locally. The node then changes to display the address at which the server is locally available. Double-click (or click in VS Code) or use the **Disconnect Server** action to disconnect from the server and free the local port.
+On the guest side, servers shared by the host appear under the Shared Servers node. Double-click (or click in VS Code) the server or use the **Connect Server** action to connect to the server. CodeTogether Live attempts to make the server available at the same port at which it is running on the host, but chooses the next available port if that port is not available locally. The node then changes to display the address at which the server is locally available. Double-click (or click in VS Code) or use the **Disconnect Server** action to disconnect from the server and free the local port.
 
 ![Shared Server](/img/participating-in-a-session/ParticipateServer.png)
 

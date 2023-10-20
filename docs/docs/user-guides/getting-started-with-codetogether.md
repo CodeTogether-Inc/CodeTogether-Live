@@ -4,16 +4,16 @@ sidebar_label: Getting Started
 sidebar_position: 1
 ---
 
-# Getting Started with CodeTogether
+# Getting Started with CodeTogether Live
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import Button from '@site/src/components/Button';
 
-CodeTogether allows you to host and join collaborative coding sessions from Eclipse, IntelliJ or VS Code. Guests can join a session from their own IDE with CodeTogether installed, even if it’s different from the host’s IDE. Guests can also join a session from any modern browser with no setup required. This guide includes detailed information to help you get started, regardless of which IDE you use.
+CodeTogether Live allows you to host and join collaborative coding sessions from Eclipse, IntelliJ or VS Code, as well as IDE based on these. Guests can join a session from their own IDE with CodeTogether Live installed, even if it’s different from the host’s IDE. Guests can also join a session from any modern browser with no setup required. This guide includes detailed information to help you get started, regardless of which IDE you use.
 
-**If you’re looking for the basics you need to know to use CodeTogether, see the Quickstart Guide for your IDE.**
+**If you’re looking for the basics you need to know to use CodeTogether Live, see the Quickstart Guide for your IDE.**
 
 <div className="column-content">
   <Button text="Eclipse Quickstart" to="https://www.codetogether.com/resources/three-steps-to-pair-programming-eclipse/"/>
@@ -23,7 +23,7 @@ CodeTogether allows you to host and join collaborative coding sessions from Ecli
 
 ## Logging In
 
-The CodeTogether Free plan allows anonymous usage, limiting sessions to 3 guests for a maximum of 60 minutes. If you have a Pro or Teams account, log in to remove these limits. With a Teams plan, you also unlock advanced features including the ability to host or join team-restricted sessions and terminal write support. To compare plan benefits, see [Plans and Pricing](https://www.codetogether.com/pricing/).
+The CodeTogether Free plan allows anonymous usage, limiting sessions to 3 guests for a maximum of 60 minutes. If you have a Pro or Teams account, log in to remove these limits. With a Teams plan, you also unlock advanced features including the ability to host or join team-restricted sessions and terminal write support. To compare plan benefits, see [Plans and Pricing](https://www.codetogether.com/live/pricing/).
 
 You can create an account on [codetogether.com](https://www.codetogether.com/register/). You also have the option to register an account when you log in to CodeTogether from Eclipse or IntelliJ. 
 
@@ -33,7 +33,7 @@ To log in to CodeTogether, click the **Log in** link in the [CodeTogether view](
 
 ## Hosting a Session
 
-You can host a pair programming session directly from your IDE. All CodeTogether sessions are end-to-end encrypted. For details on how your data is kept secure, see [CodeTogether Security](https://www.codetogether.com/download/security/).
+You can host a pair programming session directly from your IDE. All CodeTogether Live sessions are end-to-end encrypted. For details on how your data is kept secure, see [CodeTogether Security](https://www.codetogether.com/live/download/security/).
 
 ### Starting a Session
 
@@ -96,7 +96,7 @@ For more details on how these modes work, see [Session Basics](session-basics.md
 
 Select one of the following options to define driving and editing privileges in the session.
 
-- **Dynamic driver based on activity**—CodeTogether dynamically assigns and manages the driver role based on various actions undertaken by session participants. Actions include typing, selecting, navigating between files, IDE dialog use, etc. Non-driver participants can navigate to other files, analyze and edit code, and are eligible to become the driver. This is the default, recommended cursor mode in CodeTogether, and was the only available mode until version 2022.1.
+- **Dynamic driver based on activity**—CodeTogether Live dynamically assigns and manages the driver role based on various actions undertaken by session participants. Actions include typing, selecting, navigating between files, IDE dialog use, etc. Non-driver participants can navigate to other files, analyze and edit code, and are eligible to become the driver. This is the default, recommended cursor mode in CodeTogether Live, and was the only available mode until version 2022.1.
 - **Explicitly assigned driver (strong-style pairing)**—The current driver must explicitly grant the driver role to another participant in the session. Non-driver participants can navigate to other files, analyze and edit code; however, they will not become the new driver unless the role is assigned to them by the current driver. 
 - **Only host has a cursor (presentation mode)**—In this mode, the host is always the driver. Guests may navigate to other files, and analyze code, but they will not be able to edit it.
 
@@ -195,7 +195,7 @@ You can also use any of the following options to copy the invite URL to your cli
 :::note
 
 - Participants can also invite users to a session using similar techniques.
-- The number of participants that can join a session will be limited by your CodeTogether [plan](https://www.codetogether.com/pricing/).
+- The number of participants that can join a session will be limited by your CodeTogether [plan](https://www.codetogether.com/live/pricing/).
 
 :::
 
@@ -215,11 +215,11 @@ Sessions automatically timeout:
 
 ## Joining a Session 
 
-You can join a session from a [supported](https://www.codetogether.com/compatibility/) IDE or modern browser. Whichever method you choose, you lose access to all shared projects when you leave the session or the session ends.
+You can join a session from a [supported](https://www.codetogether.com/live/compatibility/) IDE or modern browser. Whichever method you choose, you lose access to all shared projects when you leave the session or the session ends.
 
 :::note
 
-To join from an IDE, CodeTogether must be installed in your IDE. See the installation guides for [Eclipse](../installation-guides/codetogether-for-eclipse-installation.md), [IntelliJ](../installation-guides/codetogether-for-jetbrains-ides-installation.md) and [VS Code](../installation-guides/codetogether-for-vs-code-installation.md).
+To join from an IDE, CodeTogether Live must be installed in your IDE. See the installation guides for [Eclipse](../installation-guides/codetogether-for-eclipse-installation.md), [IntelliJ](../installation-guides/codetogether-for-jetbrains-ides-installation.md) and [VS Code](../installation-guides/codetogether-for-vs-code-installation.md).
 
 :::
 
@@ -266,9 +266,9 @@ When you join a session, if the host has allowed guests to choose their initial 
 
 The resulting workspace is slightly different based on which IDE you use to join the session:
 
-- **Eclipse**—A new CodeTogether project is created in your existing workspace. All projects shared in the session appear as individual nodes immediately under this project.
+- **Eclipse**—A new CodeTogether Live project is created in your existing workspace. All projects shared in the session appear as individual nodes immediately under this project.
 - **IntelliJ**—You can choose to join the session from the current window or from a new window. Whatever you choose, the projects shared will appear as a top level nodes within the Project view.
-- **VS Code**—A new window is automatically opened with a CodeTogether workspace. The projects shared appear as top level nodes under this workspace.
+- **VS Code**—A new window is automatically opened with a CodeTogether Live workspace. The projects shared appear as top level nodes under this workspace.
 
 ### Joining from a Browser
 
@@ -335,7 +335,7 @@ Once signed out of teams, you can use the **Reconnect Now** link to easily sign 
 
 ## Working in the Session
 
-CodeTogether includes integrated communication tools including audio, video, text chat and screen sharing. For more details, see [Using Audio & Video in a Session](using-audio-video-in-a-session.md).
+CodeTogether Live includes integrated communication tools including audio, video, text chat and screen sharing. For more details, see [Using Audio & Video in a Session](using-audio-video-in-a-session.md).
 
 If the host gives participants full access rights, each member determines whether they want to code alone or together. For more details, see [Session Basics](session-basics.md).
 

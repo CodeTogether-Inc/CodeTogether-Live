@@ -4,14 +4,14 @@ sidebar_label: On-Premises FAQ
 sidebar_position: 2
 ---
 
-# CodeTogether On-Premises FAQ
+# CodeTogether Live On-Premises FAQ
 
 ## General Information
 
 <details>
-  <summary>Does CodeTogether have an On-Premises version?</summary>
+  <summary>Does CodeTogether Live have an On-Premises version?</summary>
 
-Yes, an [On-Premises](https://www.codetogether.com/on-premises/) version of CodeTogether is available for Enterprise customers via a container image. The container provides a full set of collaboration services, including tailored client plugins for the host IDEs. See the [CodeTogether On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md) for details.
+Yes, an [On-Premises](https://www.codetogether.com/live/on-premises/) version of CodeTogether is available for Enterprise customers via a container image. The container provides a full set of collaboration services, including tailored client plugins for the host IDEs. See the [CodeTogether Live On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md) for details.
 
 </details>
 
@@ -25,7 +25,7 @@ On-Premises updates are in sync with updates to our public SaaS service, which a
 <details>
   <summary>Is CodeTogether compliant with the General Data Protection Regulation required by the EU?</summary>
 
-On-Premises usage of CodeTogether does not share nor capture any information that CodeTogether has access to. In addition, the edge servers themselves as used in CodeTogether do not store information. Any extra requirements for internal software usage may still apply but is out of CodeTogether's scope.
+On-Premises usage of CodeTogether Live does not share nor capture any information that CodeTogether has access to. In addition, the edge servers themselves as used in CodeTogether Live do not store information. Any extra requirements for internal software usage may still apply but is out of CodeTogether's scope.
 
 </details>
 
@@ -34,14 +34,14 @@ On-Premises usage of CodeTogether does not share nor capture any information tha
 <details>
   <summary>Do you offer a trial version?</summary>
 
-We are happy to offer a free 45 day trial. Contact [customer service](https://www.codetogether.com/pricing/on-premises-contact-us/) to get your license.
+We are happy to offer a free 45 day trial. Contact [customer service](https://www.codetogether.com/live/on-premises-contact-us/) to get your license.
 
 </details>
 
 <details>
   <summary>What is the cost of the On-Premises version?</summary>
 
-The Enterprise On-Premises plan starts at US$1750/year and can be tailored to meet your specific needs. For details, see [CodeTogether Plans & Pricing](https://www.codetogether.com/pricing/).
+The Enterprise On-Premises plan starts at US$1750/year and can be tailored to meet your specific needs. For details, see [CodeTogether Plans & Pricing](https://www.codetogether.com/live/pricing/).
 
 </details>
 
@@ -64,14 +64,14 @@ The CodeTogether service does not require a very powerful system—it’s more o
 <details>
   <summary>How do I configure the On-Premises version?</summary>
 
-Pull down the Docker image from CodeTogether's Private Docker Registry or our security-audited listing in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55), and then run the CodeTogether On-Premises container with straight-up Docker or Kubernetes. For detailed instructions, see [CodeTogether On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md)
+Pull down the Docker image from CodeTogether's Private Docker Registry or our security-audited listing in the [Red Hat Software Catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55), and then run the CodeTogether On-Premises container with straight-up Docker or Kubernetes. For detailed instructions, see [CodeTogether Live On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md)
 
 </details>
 
 <details>
   <summary>I have several Code Together servers, is there an integrated load balancer or do I need a personal load balancer?</summary>
 
-As of version 2022.1, CodeTogether does support multi-server deployments for load balancing, and lower latency in regional deployments. See the [CodeTogether On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md) for details.
+As of version 2022.1, CodeTogether Live does support multi-server deployments for load balancing, and lower latency in regional deployments. See the [CodeTogether Live On-Premises Installation Guide](../on-premises/on-premises-installation-guide.md) for details.
 
 </details>
 
@@ -80,7 +80,7 @@ As of version 2022.1, CodeTogether does support multi-server deployments for loa
 <details>
   <summary>Is single sign-on (SSO) supported?</summary>
 
-CodeTogether 4.0 introduced [single sign-on (SSO) integration](/on-premises/sso/sso.md) for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether works with providers like Okta, Azure AD, Microsoft AD FS, Auth0, Oracle and Keycloak.
+CodeTogether Live 4.0 introduced [single sign-on (SSO) integration](/on-premises/sso/sso.md) for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether Live works with providers like Okta, Azure AD, Microsoft AD FS, Auth0, Oracle and Keycloak.
 
 </details>
 
@@ -92,16 +92,16 @@ The base is RedHat UBI 8.
 </details>
 
 <details>
-  <summary>Does CodeTogether use single or multi-tenant architecture?</summary>
+  <summary>Does CodeTogether Live use single or multi-tenant architecture?</summary>
 
-The On-Premises version of CodeTogether uses single tenant architecture.
+The On-Premises version of CodeTogether Live uses single tenant architecture.
 
 </details>
 
 <details>
-  <summary>Is it possible to operate CodeTogether in a completely air-gapped environment?</summary>
+  <summary>Is it possible to operate CodeTogether Live in a completely air-gapped environment?</summary>
 
-Yes, CodeTogether On-Premises is perfect for an air-gapped environment. It does not connect with any external servers, including our own.
+Yes, CodeTogether Live On-Premises is perfect for an air-gapped environment. It does not connect with any external servers, including our own.
 
 </details>
 
@@ -115,14 +115,14 @@ Clients use both HTTPs and Websockets to communicate with the CodeTogether serve
 ## Security
 
 <details>
-  <summary>What type of encryption does CodeTogether use?</summary>
+  <summary>What type of encryption does CodeTogether Live use?</summary>
 
-In addition to encryption using TLS 1.3./SHA 256 at the transport layer, CodeTogether also has end-to-end encryption between the host and participants using AES-GCM. [Learn more](https://www.codetogether.com/download/security/)
+In addition to encryption using TLS 1.3./SHA 256 at the transport layer, CodeTogether Live also has end-to-end encryption between the host and participants using AES-GCM. [Learn more](https://www.codetogether.com/live/download/security/)
 
 </details>
 
 <details>
-  <summary>What measures are taken to keep CodeTogether secure?</summary>
+  <summary>What measures are taken to keep CodeTogether Live secure?</summary>
 
 Besides strictly following secure coding practices, every build is scanned using vulnerability checking tools like Snyk, Trivy, etc. Penetration tests are frequently run on our container, ensuring that it is not susceptible to vulnerabilities and attacks. Our security audited listing can be found in the [Red Hat Software catalog](https://catalog.redhat.com/software/containers/genuitec/codetogether/5fbbdc772937386820426f55).
 
@@ -143,11 +143,11 @@ If an SSO provider is used (optional), then hosts and guests must authenticate b
 </details>
 
 <details>
-  <summary>What information is CodeTogether looking at?</summary>
+  <summary>What information is CodeTogether Live looking at?</summary>
 
-The On-Premises version of CodeTogether is located on your server and does not connect to any external servers. CodeTogether looks at the files in the development workspace and transfers those files as needed between members of the session to enable its core function of shared coding. However, participants do not retain these files after the session is closed. Only the files being actively edited are shared. For the rest, CodeTogether only shares file and directory names so that the workspace views and project trees can be displayed in the collaborative environments.
+The On-Premises version of CodeTogether Live is located on your server and does not connect to any external servers. CodeTogether Live looks at the files in the development workspace and transfers those files as needed between members of the session to enable its core function of shared coding. However, participants do not retain these files after the session is closed. Only the files being actively edited are shared. For the rest, CodeTogether Live only shares file and directory names so that the workspace views and project trees can be displayed in the collaborative environments.
 
-With end-to-end encryption always in place, your on-premises server never sees the contents of the file so it never stores any of these encrypted files. The server simply moves files between participants. CodeTogether also transfers validation markers, quick fix information, and content assist suggestions between members of the session to facilitate the primary function of collaborative coding.
+With end-to-end encryption always in place, your on-premises server never sees the contents of the file so it never stores any of these encrypted files. The server simply moves files between participants. CodeTogether Live also transfers validation markers, quick fix information, and content assist suggestions between members of the session to facilitate the primary function of collaborative coding.
 
 </details>
 

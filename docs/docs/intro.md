@@ -3,17 +3,17 @@ sidebar_position: 1
 slug: /
 ---
 
-# Welcome to CodeTogether
+# Welcome to CodeTogether Live
 
-CodeTogether lets you live share your IDE and coding sessions. Everyone in the session sees changes in real time, even when coding in the same file, it’s like Google Docs for your code. CodeTogether is perfect for many uses: pair programming, mob programming, code review, project design, unit testing, education, interviews, remote development and more.
+CodeTogether Live lets you live share your IDE and coding sessions. Everyone in the session sees changes in real time, even when coding in the same file, it’s like Google Docs for your code. CodeTogether Live is perfect for many uses: pair programming, mob programming, code review, project design, unit testing, education, interviews, remote development and more.
 
 ## Key Features
 
-Here's a quick look at what CodeTogether has to offer. For additional details and related videos, visit [codetogether.com](https://www.codetogether.com/).
+Here's a quick look at what CodeTogether Live has to offer. For additional details and related videos, visit [codetogether.com](https://www.codetogether.com/live/).
 
 ### ✓ Cross-IDE support
 
-Host and join from VS Code, IntelliJ or Eclipse, including IDEs based on these—[view the complete list](https://www.codetogether.com/compatibility/). 
+Host and join from VS Code, IntelliJ or Eclipse, including IDEs based on these—[view the complete list](https://www.codetogether.com/live/compatibility/). 
 
 ### ✓ Browser support
 
@@ -21,7 +21,7 @@ You can also join a session from a browser. You get IDE functionality with the t
 
 ### ✓ Secure
 
-The full source code stays on the host system and only necessary information is relayed using end-to-end encryption—[view security details](https://www.codetogether.com/download/security/).
+The full source code stays on the host system and only necessary information is relayed using end-to-end encryption—[view security details](https://www.codetogether.com/live/download/security/).
 
 ### ✓ Host-based intelligence
 
@@ -45,14 +45,14 @@ Guests can write tests, run tests and analyze results, allowing for test-driven 
 
 ### ✓ Plans for Everyone
 
-From a Free plan with anonymous usage to Enterprise plans with on-premises deployment, CodeTogether has an option that meets your specific needs—[view all plans](https://www.codetogether.com/pricing/). 
+From a Free plan with anonymous usage to Enterprise plans with on-premises deployment, CodeTogether Live has an option that meets your specific needs—[view all plans](https://www.codetogether.com/live/pricing/). 
 
 ## Getting Help
 
-We offer a number of ways to help you succeed with CodeTogether.
+We offer a number of ways to help you succeed with CodeTogether Live.
 
 ### Documentation
-Extensive documentation helps you get the most from CodeTogether—use the left sidebar to access all of these docs.
+Extensive documentation helps you get the most from CodeTogether Live—use the left sidebar to access all of these docs.
 
 Not sure where to start? If you are using the SaaS version, start with the installation instructions for your IDE. If you are using the On-Premises version, start with the Installation Overview, and then check out the On-Premises FAQ. After installing, the Getting Started Guide and the General FAQ are good docs to dive into.
 
@@ -62,4 +62,4 @@ If you can’t find an answer to your question in our Documentation, we are alwa
 
 ### Issue Tracker
 
-We are always looking for ways to improve CodeTogether. Go to our [Issue Tracker](https://github.com/Genuitec/CodeTogether) to request new features or report a bug.
+We are always looking for ways to improve CodeTogether Live. Go to our [Issue Tracker](https://github.com/Genuitec/CodeTogether) to request new features or report a bug.

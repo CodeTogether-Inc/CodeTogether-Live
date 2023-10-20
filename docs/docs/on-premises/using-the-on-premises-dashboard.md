@@ -6,7 +6,7 @@ sidebar_position: 7
 
 # Using the On-Premises Dashboard
 
-The on-premises dashboard presents useful information on CodeTogether usage in your organization. It provides access to real-time information, historical usage trends, and the ability to configure some server settings. The dashboard can be accessed at `https://SERVERFQDN/dashboard`.
+The on-premises dashboard presents useful information on CodeTogether Live usage in your organization. It provides access to real-time information, historical usage trends, and the ability to configure some server settings. The dashboard can be accessed at `https://SERVERFQDN/dashboard`.
 
 In a multi-server on-premises deployment, the Locator and individual edge servers will have dedicated dashboards—server configuration options are only available in Locator dashboards.
 
@@ -47,7 +47,7 @@ Use the Client Downloads button to download plugins/extensions for different IDE
 
 ## Usage Graphs
 
-In addition to the unique sessions/peak connections per day graphs, this page also displays charts indicating what IDEs were used to host, and what clients were used to join sessions. It also displays a graph displaying the number of CodeTogether clients downloaded per day.
+In addition to the unique sessions/peak connections per day graphs, this page also displays charts indicating what IDEs were used to host, and what clients were used to join sessions. It also displays a graph displaying the number of CodeTogether Live clients downloaded per day.
 
 ![Usage graphs](/img/using-the-on-premises-dashboard/dashboard_usage_graphs.png)
 

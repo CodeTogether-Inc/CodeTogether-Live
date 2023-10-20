@@ -4,12 +4,12 @@ sidebar_label: General FAQ
 sidebar_position: 1
 ---
 
-# CodeTogether FAQ
+# CodeTogether Live FAQ
 
 
 ## Security
 
-  👀 See [CodeTogether Security](https://www.codetogether.com/download/security) for more details
+  👀 See [CodeTogether Security](https://www.codetogether.com/live/download/security) for more details
 
 <details>
   <summary>Is my code stored on CodeTogether’s servers?</summary>
@@ -19,7 +19,7 @@ No, our servers only relay data between members in a shared session. We do not s
 </details>
 
 <details>
-  <summary> I want to be sure my code is seen only by those I invite to a session. Does CodeTogether use end-to-end encryption?</summary>
+  <summary> I want to be sure my code is seen only by those I invite to a session. Does CodeTogether Live use end-to-end encryption?</summary>
 
 Yes, your code is end-to-end encrypted with a key known only to members of the session, and this key changes every session. If our server were to be somehow compromised, there would be no way to decrypt data to get to your source code. Your source cannot be read by, and is never stored on, CodeTogether’s servers.
 
@@ -28,7 +28,7 @@ Yes, your code is end-to-end encrypted with a key known only to members of the s
 <details>
   <summary> Is the Audio/Video bridge encrypted?</summary>
 
-  A/V communications use encrypted WebRTC channels that are independent from CodeTogether session services. Due to limitations in how browsers currently support WebRTC, these communications are not end-to-end encrypted. In the unlikely event of these channels being compromised, as they are independent of the regular CodeTogether session, they can never expose access to the source code or your CodeTogether session in any way. 
+  A/V communications use encrypted WebRTC channels that are independent from CodeTogether Live session services. Due to limitations in how browsers currently support WebRTC, these communications are not end-to-end encrypted. In the unlikely event of these channels being compromised, as they are independent of the regular CodeTogether Live session, they can never expose access to the source code or your CodeTogether Live session in any way. 
 
 </details>
 
@@ -47,35 +47,35 @@ We store IP address, IDE type, usernames and session duration for the purpose of
 </details>
 
 <details>
-  <summary> How do you ensure CodeTogether is free from vulnerabilities?</summary>
+  <summary> How do you ensure CodeTogether Live is free from vulnerabilities?</summary>
 
-Each CodeTogether build is automatically scanned for vulnerabilities using Snyk, Trivy, and Dependency-check. We also perform rigorous code audits as part of every release to specifically ensure that there are no unexpected data transmissions and no leakage of unencrypted customer code. This includes an inspection of data packets transmitted by all members in a collaborative session.
+Each CodeTogether Live build is automatically scanned for vulnerabilities using Snyk, Trivy, and Dependency-check. We also perform rigorous code audits as part of every release to specifically ensure that there are no unexpected data transmissions and no leakage of unencrypted customer code. This includes an inspection of data packets transmitted by all members in a collaborative session.
 
 </details>
 
 <details>
   <summary> Can I prevent participants from being able to edit in a session?</summary>
 
-Yes, this feature was added in CodeTogether 3.1. When starting a session, the host is prompted to choose if participants will have editing privileges. CodeTogether [Teams](https://www.codetogether.com/teams/), introduced in 4.0, allows you to restrict access based on team members vs. non-team members.
+Yes, this feature was added in CodeTogether Live 3.1. When starting a session, the host is prompted to choose if participants will have editing privileges. CodeTogether [Teams](https://www.codetogether.com/teams/), introduced in 4.0, allows you to restrict access based on team members vs. non-team members.
 
 </details>
 
 <details>
   <summary> Can I prevent the entire workspace/project from being shared in a session?</summary>
 
-Yes. To exclude files, folders or projects from the CodeTogether session, right-click on the resource and select **Add to CodeTogether Ignore**. You can also edit the `.codetogether.ignore` file manually and use glob patterns. See [Getting Started with CodeTogether](../user-guides/getting-started-with-codetogether.md#ignore) for details.
+Yes. To exclude files, folders or projects from the CodeTogether Live session, right-click on the resource and select **Add to CodeTogether Ignore**. You can also edit the `.codetogether.ignore` file manually and use glob patterns. See [Getting Started with CodeTogether](../user-guides/getting-started-with-codetogether.md#ignore) for details.
 
 </details>
 
 <details>
-  <summary> We would like to have a private instance of CodeTogether running behind our firewall. Do you support this?</summary>
+  <summary> We would like to have a private instance of CodeTogether Live running behind our firewall. Do you support this?</summary>
 
 Yes, we do have an [on-premises version](https://www.codetogether.com/on-premises/). 
 
 </details>
 
 <details>
-  <summary> How can I configure my firewall to allow CodeTogether to function?</summary>
+  <summary> How can I configure my firewall to allow CodeTogether Live to function?</summary>
 
 CodeTogether uses the following domains and ports: 
 
@@ -93,7 +93,7 @@ Ensure these ports are accessible.
 <details>
   <summary> Is single sign-on (SSO) supported?</summary>
 
-CodeTogether 4.0 introduced [single sign-on (SSO)](/on-premises/sso/sso.md) integration for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether works with providers like Okta, Azure AD, Microsoft AD FS and Auth0.
+CodeTogether Live 4.0 introduced [single sign-on (SSO)](/on-premises/sso/sso.md) integration for on-premises installations. If the SSO provider supports the OpenID Connect protocol for sign on, on-premises installations can allow CodeTogether access to users only if they’ve been authorized by the provider. The OIDC protocol ensures CodeTogether Live works with providers like Okta, Azure AD, Microsoft AD FS and Auth0.
 
 </details>
 
@@ -106,7 +106,7 @@ CodeTogether 4.0 introduced [single sign-on (SSO)](/on-premises/sso/sso.md) inte
 <details>
   <summary>Can I join a session from an IDE?</summary>
 
-Yes, this [feature](https://www.codetogether.com/docs/codetogether-ide-to-ide-support/) was introduced in CodeTogether 3.0. Hosts and guests can use Eclipse, IntelliJ, or VS Code, as well as IDEs based on them. Everyone in a session can remain in their IDE, even if it is different than the IDE used by others in the session.
+Yes, this [feature](https://www.codetogether.com/docs/codetogether-ide-to-ide-support/) was introduced in CodeTogether Live 3.0. Hosts and guests can use Eclipse, IntelliJ, or VS Code, as well as IDEs based on them. Everyone in a session can remain in their IDE, even if it is different than the IDE used by others in the session.
 
 </details>
 <details>
@@ -118,7 +118,7 @@ Yes, language capabilities such as content assist, validation, quick fixes, code
 <details>
   <summary>Why is the syntax highlighting for a shared file different from the native highlighting for that same language in my IDE?</summary>
 
-In order to provide collaborative features, CodeTogether uses a custom editor for shared files instead of your IDE’s native editor. This is why the colors may not be exactly the same; we are working to minimize these differences.
+In order to provide collaborative features, CodeTogether Live uses a custom editor for shared files instead of your IDE’s native editor. This is why the colors may not be exactly the same; we are working to minimize these differences.
 
 </details>
 <details>
@@ -128,7 +128,7 @@ Yes, multiple members in a session can edit code at the same time, even in the s
 
 </details>
 <details>
-  <summary>Is CodeTogether good for mob programming?</summary>
+  <summary>Is CodeTogether Live good for mob programming?</summary>
 
 Yes! Participants can work solo, paired, as a mob, or any combination. Each session can include any number of dynamic groups.
 
@@ -154,31 +154,31 @@ When sharing a cursor with a group that has an active driver, you can break away
 <details>
   <summary>Can participants see console output?</summary>
 
-Yes, this feature was added in CodeTogether 3.1. Console output on the host is visible to all participants from the appropriate view: the **Console** view in Eclipse, the **Run** view in IntelliJ, or the **Output** view in VS Code or a browser.
+Yes, this feature was added in CodeTogether Live 3.1. Console output on the host is visible to all participants from the appropriate view: the **Console** view in Eclipse, the **Run** view in IntelliJ, or the **Output** view in VS Code or a browser.
 
 </details> 
 <details>
   <summary>Is there a shared terminal?</summary>
 
-Yes, read-only [terminal support](../user-guides/participating-in-a-session.md/#terminal) is available if the host allows it. In addition, the host can give write access to participants with a [Teams](https://codetogether.com/teams) or [On-Premises](https://www.codetogether.com/on-premises/) plan.
+Yes, read-only [terminal support](../user-guides/participating-in-a-session.md/#terminal) is available if the host allows it. In addition, the host can give write access to participants with a [Teams](https://codetogether.com/teams) or [On-Premises](https://www.codetogether.com/live/on-premises/) plan.
 
 </details>
 <details>
   <summary>Can guests run unit tests and launches?</summary>
 
-Yes, support for [running tests and launches](../user-guides/running-tests-and-launches.md) was introduced in version 4.2. Access can be restricted with a [Teams](https://codetogether.com/teams) or [On-Premises](https://www.codetogether.com/on-premises/) plan.
+Yes, support for [running tests and launches](../user-guides/running-tests-and-launches.md) was introduced in version 4.2. Access can be restricted with a [Teams](https://codetogether.com/teams) or [On-Premises](https://www.codetogether.com/live/on-premises/) plan.
 
 </details>
 <details>
   <summary>Is it possible for participants to access a web app running on the host?</summary>
 
-Yes, support for [shared servers](../user-guides/participating-in-a-session.md/#servers) was introduced in version 4.1 for users with a [Teams](https://codetogether.com/teams) or [On-Premises](https://www.codetogether.com/on-premises/) plan.
+Yes, support for [shared servers](../user-guides/participating-in-a-session.md/#servers) was introduced in version 4.1 for users with a [Teams](https://codetogether.com/teams) or [On-Premises](https://www.codetogether.com/live/on-premises/) plan.
 
 </details>
 <details>
   <summary>I can join a session from a browser, but not from an IDE. Why?</summary>
 
-A [bug](https://github.com/Genuitec/CodeTogether/issues/206) in CodeTogether versions prior to 2022.1 prevented this from working if your project/workspace had a large number of files. Ensure you are using the latest version of CodeTogether to both host and join sessions.
+A [bug](https://github.com/Genuitec/CodeTogether/issues/206) in CodeTogether Live versions prior to 2022.1 prevented this from working if your project/workspace had a large number of files. Ensure you are using the latest version of CodeTogether Live to both host and join sessions.
 
 </details>
 <details>
@@ -196,19 +196,19 @@ On our GitHub [Issues](https://github.com/Genuitec/CodeTogether/issues) page. Be
 
 ## Compatibility
 
-👀 See [CodeTogether Compatibility](https://www.codetogether.com/compatibility/) for more details
+👀 See [CodeTogether Compatibility](https://www.codetogether.com/live/compatibility/) for more details
 
 <details>
   <summary>What IDEs do you support?</summary>
 
-Supported IDEs include Eclipse, IntelliJ and VS Code, along with IDEs based on them. For a complete list of supported IDEs and versions, see [CodeTogether Compatibility](https://www.codetogether.com/compatibility/).
+Supported IDEs include Eclipse, IntelliJ and VS Code, along with IDEs based on them. For a complete list of supported IDEs and versions, see [CodeTogether Compatibility](https://www.codetogether.com/live/compatibility/).
 
 </details>
 
 <details>
   <summary>In Rider, I don't see content assist, validation, or code-analysis. Is this IDE supported?</summary>
 
-Due to Rider’s unique architecture, CodeTogether does not support Rider. See the [issue](https://github.com/Genuitec/CodeTogether/issues/79) in Github for details. 
+Due to Rider’s unique architecture, CodeTogether Live does not support Rider. See the [issue](https://github.com/Genuitec/CodeTogether/issues/79) in Github for details. 
 
 </details>
 <details>
@@ -240,16 +240,16 @@ Some key bindings cannot be overridden in a browser, consider joining from an ID
 
 ## License Levels and Limitations
 
-👀 See [CodeTogether Plans & Pricing](https://www.codetogether.com/pricing/) for more details
+👀 See [CodeTogether Plans & Pricing](https://www.codetogether.com/live/pricing/) for more details
 
 <details>
-  <summary>Is CodeTogether free?</summary>
+  <summary>Is CodeTogether Live free?</summary>
 
-The Cloud-SaaS version of CodeTogether includes a Free plan as well as 2 paid plans: Pro and Teams. The [Pro](https://www.codetogether.com/pro/) plan removes the session time limit of the Free plan and allows up to 50 guests. Our [Teams](https://codetogether.com/teams) plan, built for a team environment with advanced functionality, is free to try for 30 days. 
+The Cloud-SaaS version of CodeTogether includes a Free plan as well as 2 paid plans: Pro and Teams. The [Pro](https://www.codetogether.com/live/pro/) plan removes the session time limit of the Free plan and allows up to 50 guests. Our [Teams](https://codetogether.com/teams) plan, built for a team environment with advanced functionality, is free to try for 30 days. 
 
-We also offer an [On-Premises](https://www.codetogether.com/on-premises/) version for our Enterprise customers. This is a paid plan with a 45 day free trial.
+We also offer an [On-Premises](https://www.codetogether.com/live/on-premises/) version for our Enterprise customers. This is a paid plan with a 45 day free trial.
 
-See [CodeTogether Plans & Pricing](https://www.codetogether.com/pricing/) for details.
+See [CodeTogether Plans & Pricing](https://www.codetogether.com/live/pricing/) for details.
 
 </details>
 <details>
@@ -273,7 +273,7 @@ Pro, Teams, Enterprise: Unlimited
 <details>
   <summary>I’m a student/teacher. Do you offer Educational licenses?</summary>
 
-Yes, we do! [See if you qualify](https://www.codetogether.com/pricing/educational-license/).
+Yes, we do! [See if you qualify](https://www.codetogether.com/live/educational-licenses/).
 
 </details>
 
@@ -284,7 +284,7 @@ Yes, we do! [See if you qualify](https://www.codetogether.com/pricing/educationa
 <details>
   <summary>Do you have any resources to help me get started with CodeTogether?</summary>
 
-Yes, check out our documentation. Start with the Install Guide for your IDE, and then read the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md) for a detailed look at how to get the most out of CodeTogether.
+Yes, check out our documentation. Start with the Install Guide for your IDE, and then read the [Getting Started Guide](../user-guides/getting-started-with-codetogether.md) for a detailed look at how to get the most out of CodeTogether Live.
 
 Another great resource is our [Video Library](https://www.codetogether.com/live/#videos) which contains a number of videos that highlight key functionality and give a nice overview of CodeTogether in action.
 

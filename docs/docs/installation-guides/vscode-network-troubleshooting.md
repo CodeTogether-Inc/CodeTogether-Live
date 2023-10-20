@@ -6,7 +6,7 @@ sidebar_position: 3.1
 
 # VS Code Proxy Troubleshooting
 
-CodeTogether supports proxy servers in 2 different ways: VS Code built-in proxy support, or via a custom `codetogether.proxy` setting.
+CodeTogether Live supports proxy servers in 2 different ways: VS Code built-in proxy support, or via a custom `codetogether.proxy` setting.
 
 ## VS Code Built-In Proxy Config
 
@@ -16,13 +16,13 @@ Example: Set `http.proxy` to `http://user:password@myproxy.com:8080`
 
 Note that it might not be compatible with all kinds of proxy servers.
 
-If CodeTogether is still not connecting correctly through your proxy, you can try disabling the proxy support for extensions by setting `http.proxySupport` to `off`.
+If CodeTogether Live is still not connecting correctly through your proxy, you can try disabling the proxy support for extensions by setting `http.proxySupport` to `off`.
 
 For more information on configuring proxy support in VS Code, go to <https://code.visualstudio.com/docs/setup/network#_proxy-server-support/>.
 
 ## CodeTogether Proxy Setting
 
-If CodeTogether is unable to connect using VS Code’s built-in proxy support, you can use the `codetogether.proxy` setting to specify the proxy server that should be used by CodeTogether.
+If CodeTogether Live is unable to connect using VS Code’s built-in proxy support, you can use the `codetogether.proxy` setting to specify the proxy server that should be used by CodeTogether.
 
 The value is an object with the following structure:
 
@@ -71,7 +71,7 @@ To set `codetogether.proxy`, use the VS Code settings editor:
 
 ## Debugging Connectivity Issues
 
-In CodeTogether settings, turn on the **CodeTogether: Debug** setting and restart VS Code. The extension will now log to the CodeTogether Debug console in the Output view.
+In CodeTogether Live settings, turn on the **CodeTogether: Debug** setting and restart VS Code. The extension will now log to the CodeTogether Debug console in the Output view.
 
 ### For On-Premises Users
 

@@ -8,10 +8,10 @@ sidebar_position: 4.5
 
 ## When is a TURN Server Required?
 
-CodeTogether's audio, video and screen sharing capabilities use the WebRTC framework, requiring both TCP and UDP communication to function. However, some corporate firewalls do not allow incoming UDP traffic. For such scenarios, CodeTogether allows UDP traffic to be relayed through a [TURN](https://webrtc.org/getting-started/turn-server) server, allowing these capabilities to function seamlessly over TCP. 
+CodeTogether Live's audio, video and screen sharing capabilities use the WebRTC framework, requiring both TCP and UDP communication to function. However, some corporate firewalls do not allow incoming UDP traffic. For such scenarios, CodeTogether Live allows UDP traffic to be relayed through a [TURN](https://webrtc.org/getting-started/turn-server) server, allowing these capabilities to function seamlessly over TCP. 
 
 :::caution
-Set up a TURN server on your intranet *only* if CodeTogether's Audio/Video support does not work out of the box for the above mentioned reason.
+Set up a TURN server on your intranet *only* if CodeTogether Live's Audio/Video support does not work out of the box for the above mentioned reason.
 :::
 
 ## Set Up the coturn TURN Server

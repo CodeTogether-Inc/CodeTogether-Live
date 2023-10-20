@@ -10,7 +10,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 
-CodeTogether supports coding alone, or with a group while sharing a virtual cursor. Based on settings used to [start the session](getting-started-with-codetogether.md), a single session can have multiple groups and individuals [coding or browsing](participating-in-a-session.md#hosting-a-session) independently of each other. There is also a presentation mode where only the host has a cursor.
+CodeTogether Live supports coding alone, or with a group while sharing a virtual cursor. Based on settings used to [start the session](getting-started-with-codetogether.md), a single session can have multiple groups and individuals [coding or browsing](participating-in-a-session.md#hosting-a-session) independently of each other. There is also a presentation mode where only the host has a cursor.
 
 :::note
 When multiple developers are typing simultaneously in the same file, language features like content assist, validation, navigation, etc. will continue to work for each editor, but performance may be affected. We are continuing to improve the reliability of these features in such cases.
@@ -22,12 +22,12 @@ Session participants can initially share a virtual cursor with the host or get a
 ### Coding Together with a Shared Cursor
 When developers share a virtual cursor, they typically share the same editing context—the same cursor position, and the same selection, in the same file. The following modes allow you to code together:
 
-- **Dynamic Driver Mode**—If the session was started in this mode, any member of the group sharing the virtual cursor can start driving by simply editing code, making selections, opening files, etc. Other members in the same group automatically follow the driver. No explicit actions are needed to switch drivers, though if multiple members of the group are active at the same time, CodeTogether intelligently assigns a driver using recency of activity and cooldown periods. The current driver can explicitly [make another member a driver](#driver).
+- **Dynamic Driver Mode**—If the session was started in this mode, any member of the group sharing the virtual cursor can start driving by simply editing code, making selections, opening files, etc. Other members in the same group automatically follow the driver. No explicit actions are needed to switch drivers, though if multiple members of the group are active at the same time, CodeTogether Live intelligently assigns a driver using recency of activity and cooldown periods. The current driver can explicitly [make another member a driver](#driver).
 - **Explicit Driver Mode (Strong-Style Pairing)**—In this mode, the current driver must explicitly [grant the driver role](#driver) to another member of the group—while group members can edit and navigate to different files, they cannot change to the driver role unless the role is granted by the current driver.
 
 :::note
 
-Followers in a group sharing a virtual cursor can browse code and make edits without leaving the group or becoming a driver. CodeTogether uses an intelligent system to allow the member enough time (dynamically adjusted based on activity) to make their changes or browse code, and then brings them back to follow the driver when appropriate. In the dynamic driver mode, you may become the new driver if the current driver is idle. 
+Followers in a group sharing a virtual cursor can browse code and make edits without leaving the group or becoming a driver. CodeTogether Live uses an intelligent system to allow the member enough time (dynamically adjusted based on activity) to make their changes or browse code, and then brings them back to follow the driver when appropriate. In the dynamic driver mode, you may become the new driver if the current driver is idle. 
  
 :::
 
@@ -136,7 +136,7 @@ Select an end-node from the tree to execute the corresponding action. The method
 - **Recently Modified**—Lists files that were recently modified in the current session. Select a file to open the file, or click the **Open Modified File** button.
 
 #### CodeTogether Teams Section
-This section is displayed if you are connected to a [Teams](https://www.codetogether.com/teams/) account, or an [On-Premises](https://www.codetogether.com/on-premises/) installation.
+This section is displayed if you are connected to a [Teams](https://www.codetogether.com/teams/) account, or an [On-Premises](https://www.codetogether.com/live/on-premises/) installation.
 
 :::note
 
